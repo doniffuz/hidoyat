@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_title">Добро пожаловать</string>
+    <string name="welcome_subtitle">Начните исламскую жизнь вместе с HIDOYAT</string>
+    <string name="welcome_first_name">Имя *</string>
+    <string name="welcome_last_name">Фамилия (необязательно)</string>
+    <string name="welcome_avatar_desc">Фото профиля (необязательно)</string>
+    <string name="welcome_avatar_add">Выбрать фото</string>
+    <string name="welcome_avatar_change">Заменить фото</string>
+    <string name="welcome_avatar_remove">Удалить фото</string>
+    <string name="welcome_start">Начать</string>
+    <string name="welcome_name_hint">Введите имя, чтобы продолжить</string>
+    <string name="welcome_privacy">Ваши данные хранятся только на этом телефоне.</string>
+</resources>

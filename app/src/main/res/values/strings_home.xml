@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="home_greeting">Assalomu alaykum,</string>
+    <string name="home_demo_badge">Demo</string>
+    <string name="home_soon_format">%1$s — tez orada</string>
+    <string name="home_soon_title">Tez orada</string>
+
+    <string name="home_next_prayer">Keyingi namoz</string>
+    <string name="home_prayer_name_demo">Peshin</string>
+    <string name="home_prayer_time_demo">12:30</string>
+    <string name="home_prayer_remaining">Qolgan vaqt: --:--:--</string>
+    <string name="home_prayer_demo_note">Demo ma\'lumot: haqiqiy namoz vaqtlari hali ulanmagan.</string>
+    <string name="home_prayer_all_times">Barcha namoz vaqtlarini ko\'rish</string>
+
+    <string name="home_quran_title">Qur\'onni davom ettirish</string>
+    <string name="home_quran_last_read">Oxirgi o\'qilgan sura: hali tanlanmagan</string>
+    <string name="home_quran_continue">O\'qishni davom ettirish</string>
+
+    <string name="home_quick_title">Tezkor bo\'limlar</string>
+    <string name="home_quick_prayer">Namoz</string>
+    <string name="home_quick_quran">Qur\'on</string>
+    <string name="home_quick_qibla">Qibla</string>
+    <string name="home_quick_zikr">Zikr</string>
+
+    <string name="home_daily_title">Kunlik duo va zikr</string>
+    <string name="home_dua_title">Kunlik duo</string>
+    <string name="home_zikr_title">Kunlik zikr</string>
+    <string name="home_daily_placeholder">Tekshirilgan diniy matn tez orada qo\'shiladi. Bu joy hozircha demo holatda.</string>
+    <string name="home_details">Batafsil ko\'rish</string>
+
+    <string name="home_goals_title">Kunlik maqsadlar</string>
+    <string name="home_goals_progress">%1$d / %2$d bajarildi</string>
+    <string name="home_goal_quran">Qur\'on o\'qish</string>
+    <string name="home_goal_zikr">Zikr qilish</string>
+    <string name="home_goal_dua">Duo o\'qish</string>
+
+    <string-array name="home_weekdays">
+        <item>Dushanba</item>
+        <item>Seshanba</item>
+        <item>Chorshanba</item>
+        <item>Payshanba</item>
+        <item>Juma</item>
+        <item>Shanba</item>
+        <item>Yakshanba</item>
+    </string-array>
+    <string-array name="home_months">
+        <item>yanvar</item>
+        <item>fevral</item>
+        <item>mart</item>
+        <item>aprel</item>
+        <item>may</item>
+        <item>iyun</item>
+        <item>iyul</item>
+        <item>avgust</item>
+        <item>sentabr</item>
+        <item>oktabr</item>
+        <item>noyabr</item>
+        <item>dekabr</item>
+    </string-array>
+
+    <string name="nav_home">Bosh sahifa</string>
+    <string name="nav_prayer">Namoz</string>
+    <string name="nav_quran">Qur\'on</string>
+    <string name="nav_qibla">Qibla</string>
+    <string name="nav_profile">Profil</string>
+    <string name="placeholder_soon">Tez orada</string>
+    <string name="placeholder_desc">Bu bo\'lim ustida ishlayapmiz. Tez orada shu yerda foydalanishingiz mumkin bo\'ladi.</string>
+</resources>

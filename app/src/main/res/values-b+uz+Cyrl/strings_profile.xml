@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile_edit">Профилни таҳрирлаш</string>
+    <string name="profile_save">Сақлаш</string>
+    <string name="profile_cancel">Бекор қилиш</string>
+    <string name="profile_name_required">Исм киритилиши шарт</string>
+</resources>

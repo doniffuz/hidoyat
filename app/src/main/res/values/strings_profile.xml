@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile_edit">Profilni tahrirlash</string>
+    <string name="profile_save">Saqlash</string>
+    <string name="profile_cancel">Bekor qilish</string>
+    <string name="profile_name_required">Ism kiritilishi shart</string>
+</resources>

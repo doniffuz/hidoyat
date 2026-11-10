@@ -1,3 +1,69 @@
 <resources>
     <string name="app_tagline">Лучший помощник в вашей исламской жизни</string>
+
+    <string name="home_greeting">Ассалому алейкум,</string>
+    <string name="home_demo_badge">Демо</string>
+    <string name="home_soon_format">%1$s — скоро</string>
+    <string name="home_soon_title">Скоро</string>
+
+    <string name="home_next_prayer">Следующий намаз</string>
+    <string name="home_prayer_name_demo">Зухр</string>
+    <string name="home_prayer_time_demo">12:30</string>
+    <string name="home_prayer_remaining">Осталось: --:--:--</string>
+    <string name="home_prayer_demo_note">Демо-данные: реальное время намаза пока не подключено.</string>
+    <string name="home_prayer_all_times">Посмотреть все времена намаза</string>
+
+    <string name="home_quran_title">Продолжить чтение Корана</string>
+    <string name="home_quran_last_read">Последняя прочитанная сура: ещё не выбрана</string>
+    <string name="home_quran_continue">Продолжить чтение</string>
+
+    <string name="home_quick_title">Быстрые разделы</string>
+    <string name="home_quick_prayer">Намаз</string>
+    <string name="home_quick_quran">Коран</string>
+    <string name="home_quick_qibla">Кибла</string>
+    <string name="home_quick_zikr">Зикр</string>
+
+    <string name="home_daily_title">Ежедневный дуа и зикр</string>
+    <string name="home_dua_title">Дуа дня</string>
+    <string name="home_zikr_title">Зикр дня</string>
+    <string name="home_daily_placeholder">Проверенный религиозный текст скоро будет добавлен. Пока здесь демо-содержимое.</string>
+    <string name="home_details">Подробнее</string>
+
+    <string name="home_goals_title">Ежедневные цели</string>
+    <string name="home_goals_progress">Выполнено: %1$d из %2$d</string>
+    <string name="home_goal_quran">Чтение Корана</string>
+    <string name="home_goal_zikr">Совершение зикра</string>
+    <string name="home_goal_dua">Чтение дуа</string>
+
+    <string-array name="home_weekdays">
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+        <item>Суббота</item>
+        <item>Воскресенье</item>
+    </string-array>
+    <string-array name="home_months">
+        <item>января</item>
+        <item>февраля</item>
+        <item>марта</item>
+        <item>апреля</item>
+        <item>мая</item>
+        <item>июня</item>
+        <item>июля</item>
+        <item>августа</item>
+        <item>сентября</item>
+        <item>октября</item>
+        <item>ноября</item>
+        <item>декабря</item>
+    </string-array>
+
+    <string name="nav_home">Главная</string>
+    <string name="nav_prayer">Намаз</string>
+    <string name="nav_quran">Коран</string>
+    <string name="nav_qibla">Кибла</string>
+    <string name="nav_profile">Профиль</string>
+    <string name="placeholder_soon">Скоро</string>
+    <string name="placeholder_desc">Мы работаем над этим разделом. Скоро он будет доступен здесь.</string>
 </resources>

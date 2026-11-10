@@ -4,51 +4,64 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.safeDrawingPadding
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
+import androidx.activity.viewModels
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import uz.hidoyat.app.core.ui.theme.HidoyatTheme
+import uz.hidoyat.app.feature.home.HomeViewModel
+import uz.hidoyat.app.feature.profile.ProfileScreen
+import uz.hidoyat.app.feature.profile.ProfileViewModel
+import uz.hidoyat.app.feature.welcome.WelcomeScreen
+import uz.hidoyat.app.feature.welcome.WelcomeViewModel
+import uz.hidoyat.app.navigation.HidoyatMainScreen
 
 class MainActivity : ComponentActivity() {
+    private val viewModel: HomeViewModel by viewModels()
+    private val welcomeViewModel: WelcomeViewModel by viewModels()
+    private val profileViewModel: ProfileViewModel by viewModels()
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.refresh()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             HidoyatTheme {
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Stage1Placeholder()
+                val completed by welcomeViewModel.completed.collectAsState()
+                if (completed) {
+                    val state by viewModel.state.collectAsState()
+                    HidoyatMainScreen(
+                        homeState = state,
+                        onToggleGoal = viewModel::toggleGoal,
+                        profileContent = {
+                            val profile by profileViewModel.state.collectAsState()
+                            ProfileScreen(
+                                state = profile,
+                                onEdit = profileViewModel::startEdit,
+                                onFirstNameChange = profileViewModel::onFirstNameChange,
+                                onLastNameChange = profileViewModel::onLastNameChange,
+                                onAvatarPicked = profileViewModel::onAvatarPicked,
+                                onRemoveAvatar = profileViewModel::removeAvatar,
+                                onCancel = profileViewModel::cancelEdit,
+                                onSave = { profileViewModel.save(onSaved = viewModel::refresh) }
+                            )
+                        }
+                    )
+                } else {
+                    val welcomeState by welcomeViewModel.state.collectAsState()
+                    WelcomeScreen(
+                        state = welcomeState,
+                        onFirstNameChange = welcomeViewModel::onFirstNameChange,
+                        onLastNameChange = welcomeViewModel::onLastNameChange,
+                        onAvatarPicked = welcomeViewModel::onAvatarPicked,
+                        onRemoveAvatar = welcomeViewModel::removeAvatar,
+                        onStart = { welcomeViewModel.start(onSaved = viewModel::refresh) }
+                    )
                 }
             }
         }
-    }
-}
-
-@Composable
-private fun Stage1Placeholder() {
-    Column(
-        modifier = Modifier.fillMaxSize().safeDrawingPadding(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(
-            text = stringResource(R.string.app_name),
-            style = MaterialTheme.typography.displayMedium,
-            color = MaterialTheme.colorScheme.primary
-        )
-        Text(
-            text = stringResource(R.string.app_tagline),
-            style = MaterialTheme.typography.bodyLarge,
-            textAlign = TextAlign.Center,
-            color = MaterialTheme.colorScheme.onBackground
-        )
     }
 }

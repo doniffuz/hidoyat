@@ -1,3 +1,69 @@
 <resources>
     <string name="app_tagline">Исломий ҳаётингиз учун энг яхши ёрдамчи</string>
+
+    <string name="home_greeting">Ассалому алайкум,</string>
+    <string name="home_demo_badge">Демо</string>
+    <string name="home_soon_format">%1$s — тез орада</string>
+    <string name="home_soon_title">Тез орада</string>
+
+    <string name="home_next_prayer">Кейинги намоз</string>
+    <string name="home_prayer_name_demo">Пешин</string>
+    <string name="home_prayer_time_demo">12:30</string>
+    <string name="home_prayer_remaining">Қолган вақт: --:--:--</string>
+    <string name="home_prayer_demo_note">Демо маълумот: ҳақиқий намоз вақтлари ҳали уланмаган.</string>
+    <string name="home_prayer_all_times">Барча намоз вақтларини кўриш</string>
+
+    <string name="home_quran_title">Қуръонни давом эттириш</string>
+    <string name="home_quran_last_read">Охирги ўқилган сура: ҳали танланмаган</string>
+    <string name="home_quran_continue">Ўқишни давом эттириш</string>
+
+    <string name="home_quick_title">Тезкор бўлимлар</string>
+    <string name="home_quick_prayer">Намоз</string>
+    <string name="home_quick_quran">Қуръон</string>
+    <string name="home_quick_qibla">Қибла</string>
+    <string name="home_quick_zikr">Зикр</string>
+
+    <string name="home_daily_title">Кунлик дуо ва зикр</string>
+    <string name="home_dua_title">Кунлик дуо</string>
+    <string name="home_zikr_title">Кунлик зикр</string>
+    <string name="home_daily_placeholder">Текширилган диний матн тез орада қўшилади. Бу жой ҳозирча демо ҳолатда.</string>
+    <string name="home_details">Батафсил кўриш</string>
+
+    <string name="home_goals_title">Кунлик мақсадлар</string>
+    <string name="home_goals_progress">%1$d / %2$d бажарилди</string>
+    <string name="home_goal_quran">Қуръон ўқиш</string>
+    <string name="home_goal_zikr">Зикр қилиш</string>
+    <string name="home_goal_dua">Дуо ўқиш</string>
+
+    <string-array name="home_weekdays">
+        <item>Душанба</item>
+        <item>Сешанба</item>
+        <item>Чоршанба</item>
+        <item>Пайшанба</item>
+        <item>Жума</item>
+        <item>Шанба</item>
+        <item>Якшанба</item>
+    </string-array>
+    <string-array name="home_months">
+        <item>январь</item>
+        <item>февраль</item>
+        <item>март</item>
+        <item>апрель</item>
+        <item>май</item>
+        <item>июнь</item>
+        <item>июль</item>
+        <item>август</item>
+        <item>сентябрь</item>
+        <item>октябрь</item>
+        <item>ноябрь</item>
+        <item>декабрь</item>
+    </string-array>
+
+    <string name="nav_home">Бош саҳифа</string>
+    <string name="nav_prayer">Намоз</string>
+    <string name="nav_quran">Қуръон</string>
+    <string name="nav_qibla">Қибла</string>
+    <string name="nav_profile">Профил</string>
+    <string name="placeholder_soon">Тез орада</string>
+    <string name="placeholder_desc">Бу бўлим устида ишлаяпмиз. Тез орада шу ерда фойдаланишингиз мумкин бўлади.</string>
 </resources>

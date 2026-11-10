@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_title">Хуш келибсиз</string>
+    <string name="welcome_subtitle">HIDOYAT билан исломий ҳаётингизни бошланг</string>
+    <string name="welcome_first_name">Исм *</string>
+    <string name="welcome_last_name">Фамилия (ихтиёрий)</string>
+    <string name="welcome_avatar_desc">Профил расми (ихтиёрий)</string>
+    <string name="welcome_avatar_add">Расм танлаш</string>
+    <string name="welcome_avatar_change">Расмни алмаштириш</string>
+    <string name="welcome_avatar_remove">Расмни ўчириш</string>
+    <string name="welcome_start">Бошлаш</string>
+    <string name="welcome_name_hint">Давом этиш учун исмингизни киритинг</string>
+    <string name="welcome_privacy">Маълумотларингиз фақат шу телефонда сақланади.</string>
+</resources>
