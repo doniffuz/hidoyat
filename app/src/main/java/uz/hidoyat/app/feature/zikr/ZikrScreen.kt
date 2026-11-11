@@ -54,7 +54,7 @@ fun ZikrScreen(
                     letterSpacing = 2.sp
                 )
                 Spacer(Modifier.weight(1f))
-                TextButton(onClick = viewModel::reset) {
+                TextButton(onClick = zikrViewModel::reset) {
                     Text("Tozalash")
                 }
             }
@@ -179,7 +179,7 @@ fun ZikrScreen(
 
             item {
                 Button(
-                    onClick = viewModel::increment,
+                    onClick = zikrViewModel::increment,
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(64.dp),
