@@ -58,6 +58,7 @@ import uz.hidoyat.app.feature.placeholder.PlaceholderScreen
 import uz.hidoyat.app.feature.prayer.PrayerScreen
 import uz.hidoyat.app.feature.qibla.QiblaScreen
 import uz.hidoyat.app.feature.quran.QuranScreen
+import uz.hidoyat.app.feature.zikr.ZikrScreen
 
 enum class HidoyatDestination(
     @StringRes val label: Int,
@@ -82,6 +83,7 @@ fun HidoyatMainScreen(
 ) {
     var selected by rememberSaveable { mutableIntStateOf(0) }
     var pendingQuranContinue by remember { mutableStateOf(false) }
+    var showZikr by rememberSaveable { mutableStateOf(false) }
     val destinations = HidoyatDestination.entries
     val current = destinations[selected.coerceIn(0, destinations.lastIndex)]
 
@@ -89,22 +91,30 @@ fun HidoyatMainScreen(
         if (current == HidoyatDestination.Home) onHomeShown()
     }
 
-    BackHandler(enabled = current != HidoyatDestination.Home) {
-        selected = HidoyatDestination.Home.ordinal
+    BackHandler(enabled = showZikr || current != HidoyatDestination.Home) {
+        if (showZikr) {
+            showZikr = false
+        } else {
+            selected = HidoyatDestination.Home.ordinal
+        }
     }
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         bottomBar = {
-            HidoyatBottomBar(
-                current = current,
-                onSelect = { selected = it.ordinal }
-            )
+            if (!showZikr) {
+                HidoyatBottomBar(
+                    current = current,
+                    onSelect = { selected = it.ordinal }
+                )
+            }
         }
     ) { inner ->
         Box(Modifier.fillMaxSize().padding(inner)) {
-            when (current) {
+            if (showZikr) {
+                ZikrScreen(onBack = { showZikr = false })
+            } else when (current) {
                 HidoyatDestination.Home -> HomeScreen(
                     state = homeState,
                     onToggleGoal = onToggleGoal,
@@ -114,6 +124,7 @@ fun HidoyatMainScreen(
                         pendingQuranContinue = true
                         selected = HidoyatDestination.Quran.ordinal
                     },
+                    onOpenZikr = { showZikr = true },
                     contentWindowInsets = WindowInsets.systemBars.only(
                         WindowInsetsSides.Horizontal + WindowInsetsSides.Top
                     )
