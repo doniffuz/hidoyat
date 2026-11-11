@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="qibla_title">Кибла</string>
+    <string name="qibla_subtitle">Определите направление на Каабу</string>
+    <string name="qibla_loading">Определяем направление киблы...</string>
+    <string name="qibla_location_required_title">Нужна геопозиция</string>
+    <string name="qibla_location_required_message">Разрешите доступ к геопозиции, чтобы определить направление киблы. Данные остаются на устройстве, интернет не нужен.</string>
+    <string name="qibla_grant_permission">Разрешить доступ к геопозиции</string>
+    <string name="qibla_permission_denied_message">Доступ запрещён. Его можно включить в настройках приложения.</string>
+    <string name="qibla_open_settings">Открыть настройки</string>
+    <string name="qibla_sensor_unavailable_title">Датчик компаса недоступен</string>
+    <string name="qibla_sensor_unavailable_message">На вашем устройстве нет необходимых датчиков (акселерометра и магнитометра).</string>
+    <string name="qibla_error_title">Не удалось определить местоположение</string>
+    <string name="qibla_error_message">Включите GPS или службу геолокации.</string>
+    <string name="qibla_retry">Повторить</string>
+    <string name="qibla_open_location_settings">Настройки геолокации</string>
+    <string name="qibla_calibration_title">Необходима калибровка компаса</string>
+    <string name="qibla_calibration_message">Медленно двигайте телефон в воздухе по траектории восьмёрки.</string>
+    <string name="qibla_degree_format">Кибла: %1$d°</string>
+    <string name="qibla_direction_format">Направление: %1$s</string>
+    <string name="qibla_hold_flat">Держите телефон горизонтально</string>
+    <string name="qibla_aligned">Вы смотрите в сторону киблы</string>
+    <string name="qibla_location_accuracy_low">Низкая точность геопозиции</string>
+    <string name="qibla_location_accuracy_format">Точность: ±%1$d м</string>
+    <string name="qibla_compass_description">Стрелка киблы, %1$d градусов, %2$s</string>
+    <string-array name="qibla_cardinals">
+        <item>С</item>
+        <item>В</item>
+        <item>Ю</item>
+        <item>З</item>
+    </string-array>
+    <string-array name="qibla_directions">
+        <item>Север</item>
+        <item>Северо-восток</item>
+        <item>Восток</item>
+        <item>Юго-восток</item>
+        <item>Юг</item>
+        <item>Юго-запад</item>
+        <item>Запад</item>
+        <item>Северо-запад</item>
+    </string-array>
+</resources>

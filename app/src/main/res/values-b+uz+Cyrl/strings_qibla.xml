@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="qibla_title">Қибла</string>
+    <string name="qibla_subtitle">Каъбага йўналишни аниқланг</string>
+    <string name="qibla_loading">Қибла йўналиши ҳисобланмоқда...</string>
+    <string name="qibla_location_required_title">Жойлашув керак</string>
+    <string name="qibla_location_required_message">Қибла йўналишини аниқлаш учун жойлашувга рухсат беринг. Маълумот қурилмада қолади ва интернет талаб қилинмайди.</string>
+    <string name="qibla_grant_permission">Жойлашувга рухсат бериш</string>
+    <string name="qibla_permission_denied_message">Рухсат рад этилган. Уни илова созламаларидан ёқишингиз мумкин.</string>
+    <string name="qibla_open_settings">Созламаларни очиш</string>
+    <string name="qibla_sensor_unavailable_title">Компас сенсори мавжуд эмас</string>
+    <string name="qibla_sensor_unavailable_message">Қурилмангизда компас учун керакли сенсорлар (акселерометр ва магнит майдони) топилмади.</string>
+    <string name="qibla_error_title">Жойлашувни аниқлаб бўлмади</string>
+    <string name="qibla_error_message">GPS ёки Location хизматини ёқинг.</string>
+    <string name="qibla_retry">Қайта уриниш</string>
+    <string name="qibla_open_location_settings">Жойлашув созламалари</string>
+    <string name="qibla_calibration_title">Компасни калибрлаш керак</string>
+    <string name="qibla_calibration_message">Телефонни ҳавода 8 шаклида секин ҳаракатлантиринг.</string>
+    <string name="qibla_degree_format">Қибла: %1$d°</string>
+    <string name="qibla_direction_format">Йўналиш: %1$s</string>
+    <string name="qibla_hold_flat">Телефонни текис тутинг</string>
+    <string name="qibla_aligned">Сиз Қибла томонга қарагансиз</string>
+    <string name="qibla_location_accuracy_low">Жойлашув аниқлиги паст</string>
+    <string name="qibla_location_accuracy_format">Аниқлик: ±%1$d м</string>
+    <string name="qibla_compass_description">Қибла стрелкаси, %1$d градус, %2$s</string>
+    <string-array name="qibla_cardinals">
+        <item>N</item>
+        <item>E</item>
+        <item>S</item>
+        <item>W</item>
+    </string-array>
+    <string-array name="qibla_directions">
+        <item>Шимол</item>
+        <item>Шимоли-шарқ</item>
+        <item>Шарқ</item>
+        <item>Жануби-шарқ</item>
+        <item>Жануб</item>
+        <item>Жануби-ғарб</item>
+        <item>Ғарб</item>
+        <item>Шимоли-ғарб</item>
+    </string-array>
+</resources>

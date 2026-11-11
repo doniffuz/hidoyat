@@ -67,6 +67,7 @@ import uz.hidoyat.app.core.ui.theme.HidoyatTheme
 fun HomeScreen(
     state: HomeUiState,
     onToggleGoal: (DailyGoal) -> Unit,
+    onOpenQibla: () -> Unit = {},
     contentWindowInsets: WindowInsets = ScaffoldDefaults.contentWindowInsets
 ) {
     val context = LocalContext.current
@@ -109,11 +110,12 @@ fun HomeScreen(
             item { HomeHeader(state) }
             item { NextPrayerCard(onAllTimes = { soon(R.string.home_quick_prayer) }) }
             item { QuranCard(onContinue = { soon(R.string.home_quick_quran) }) }
+            item { QiblaCard(onClick = onOpenQibla) }
             item {
                 QuickSections(
                     onPrayer = { soon(R.string.home_quick_prayer) },
                     onQuran = { soon(R.string.home_quick_quran) },
-                    onQibla = { soon(R.string.home_quick_qibla) },
+                    onQibla = onOpenQibla,
                     onZikr = { soon(R.string.home_quick_zikr) }
                 )
             }
@@ -290,6 +292,30 @@ private fun QuranCard(onContinue: () -> Unit) {
             onClick = onContinue,
             modifier = Modifier.fillMaxWidth()
         )
+    }
+}
+
+@Composable
+private fun QiblaCard(onClick: () -> Unit) {
+    HidoyatCard(modifier = Modifier.fillMaxWidth(), onClick = onClick) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(14.dp)
+        ) {
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                Text(
+                    text = stringResource(R.string.qibla_title),
+                    style = MaterialTheme.typography.titleLarge,
+                    color = MaterialTheme.colorScheme.primary
+                )
+                Text(
+                    text = stringResource(R.string.qibla_subtitle),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = HidoyatTheme.colors.textSecondary
+                )
+            }
+            IconBadge(HidoyatIconType.Qibla, boxSize = 56)
+        }
     }
 }
 

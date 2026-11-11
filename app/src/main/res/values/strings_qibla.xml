@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="qibla_title">Qibla</string>
+    <string name="qibla_subtitle">Ka‘baga yo‘nalishni aniqlang</string>
+    <string name="qibla_loading">Qibla yo‘nalishi hisoblanmoqda...</string>
+    <string name="qibla_location_required_title">Joylashuv kerak</string>
+    <string name="qibla_location_required_message">Qibla yo‘nalishini aniqlash uchun joylashuvga ruxsat bering. Ma‘lumot qurilmada qoladi va internet talab qilinmaydi.</string>
+    <string name="qibla_grant_permission">Joylashuvga ruxsat berish</string>
+    <string name="qibla_permission_denied_message">Ruxsat rad etilgan. Uni ilova sozlamalaridan yoqishingiz mumkin.</string>
+    <string name="qibla_open_settings">Sozlamalarni ochish</string>
+    <string name="qibla_sensor_unavailable_title">Kompas sensori mavjud emas</string>
+    <string name="qibla_sensor_unavailable_message">Qurilmangizda kompas uchun kerakli sensorlar (akselerometr va magnit maydoni) topilmadi.</string>
+    <string name="qibla_error_title">Joylashuvni aniqlab bo‘lmadi</string>
+    <string name="qibla_error_message">GPS yoki Location xizmatini yoqing.</string>
+    <string name="qibla_retry">Qayta urinish</string>
+    <string name="qibla_open_location_settings">Joylashuv sozlamalari</string>
+    <string name="qibla_calibration_title">Kompasni kalibrlash kerak</string>
+    <string name="qibla_calibration_message">Telefonni havoda 8 shaklida sekin harakatlantiring.</string>
+    <string name="qibla_degree_format">Qibla: %1$d°</string>
+    <string name="qibla_direction_format">Yo‘nalish: %1$s</string>
+    <string name="qibla_hold_flat">Telefonni tekis tuting</string>
+    <string name="qibla_aligned">Siz Qibla tomonga qaragansiz</string>
+    <string name="qibla_location_accuracy_low">Joylashuv aniqligi past</string>
+    <string name="qibla_location_accuracy_format">Aniqlik: ±%1$d m</string>
+    <string name="qibla_compass_description">Qibla strelkasi, %1$d daraja, %2$s</string>
+    <string-array name="qibla_cardinals">
+        <item>N</item>
+        <item>E</item>
+        <item>S</item>
+        <item>W</item>
+    </string-array>
+    <string-array name="qibla_directions">
+        <item>Shimol</item>
+        <item>Shimoli-sharq</item>
+        <item>Sharq</item>
+        <item>Janubi-sharq</item>
+        <item>Janub</item>
+        <item>Janubi-g‘arb</item>
+        <item>G‘arb</item>
+        <item>Shimoli-g‘arb</item>
+    </string-array>
+</resources>

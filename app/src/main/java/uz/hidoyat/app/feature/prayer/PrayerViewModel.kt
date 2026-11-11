@@ -94,7 +94,7 @@ class PrayerViewModel(app: Application) : AndroidViewModel(app) {
     fun locate() {
         viewModelScope.launch {
             val location = withContext(Dispatchers.IO) {
-                PrayerLocation.getCurrentLocation(getApplication<Application>())
+                PrayerLocation.getLastKnownLocation(getApplication<Application>())
             }
             if (location == null) {
                 _state.update { it.copy(locationHint = LocationHint.UNAVAILABLE) }

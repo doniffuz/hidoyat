@@ -54,6 +54,7 @@ import uz.hidoyat.app.feature.home.HomeScreen
 import uz.hidoyat.app.feature.home.HomeUiState
 import uz.hidoyat.app.feature.placeholder.PlaceholderScreen
 import uz.hidoyat.app.feature.prayer.PrayerScreen
+import uz.hidoyat.app.feature.qibla.QiblaScreen
 
 enum class HidoyatDestination(
     @StringRes val label: Int,
@@ -97,12 +98,14 @@ fun HidoyatMainScreen(
                 HidoyatDestination.Home -> HomeScreen(
                     state = homeState,
                     onToggleGoal = onToggleGoal,
+                    onOpenQibla = { selected = HidoyatDestination.Qibla.ordinal },
                     contentWindowInsets = WindowInsets.systemBars.only(
                         WindowInsetsSides.Horizontal + WindowInsetsSides.Top
                     )
                 )
                 HidoyatDestination.Profile -> profileContent()
                 HidoyatDestination.Prayer -> PrayerScreen()
+                HidoyatDestination.Qibla -> QiblaScreen()
                 else -> PlaceholderScreen(title = current.label, icon = current.icon)
             }
         }
