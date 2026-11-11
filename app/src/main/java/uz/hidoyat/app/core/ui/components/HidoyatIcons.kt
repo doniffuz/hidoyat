@@ -125,3 +125,109 @@ private fun DrawScope.person(tint: Color) {
     }
     drawPath(body, tint)
 }
+
+/** Qur'on va audio boshqaruvi uchun Canvas asosidagi ikonalar. */
+enum class HidoyatActionIcon {
+    Search, Close, Back, Pause, Play, Heart, HeartOutline,
+    Copy, Repeat, RepeatOne, Previous, Next
+}
+
+@Composable
+fun HidoyatActionIcon(
+    type: HidoyatActionIcon,
+    tint: Color,
+    modifier: Modifier = Modifier,
+    size: Dp = 24.dp
+) {
+    Canvas(modifier.size(size)) {
+        val s = this.size.minDimension / 24f
+        withTransform({ scale(s, s, pivot = Offset.Zero) }) {
+            val stroke = Stroke(width = 2f)
+            when (type) {
+                HidoyatActionIcon.Search -> {
+                    drawCircle(tint, 7f, Offset(10f, 10f), style = stroke)
+                    drawLine(tint, Offset(15f, 15f), Offset(21f, 21f), 2f)
+                }
+                HidoyatActionIcon.Close -> {
+                    drawLine(tint, Offset(5f, 5f), Offset(19f, 19f), 2f)
+                    drawLine(tint, Offset(19f, 5f), Offset(5f, 19f), 2f)
+                }
+                HidoyatActionIcon.Back -> {
+                    drawLine(tint, Offset(19f, 12f), Offset(5f, 12f), 2f)
+                    drawLine(tint, Offset(5f, 12f), Offset(12f, 5f), 2f)
+                    drawLine(tint, Offset(5f, 12f), Offset(12f, 19f), 2f)
+                }
+                HidoyatActionIcon.Pause -> {
+                    drawLine(tint, Offset(8f, 5f), Offset(8f, 19f), 3f)
+                    drawLine(tint, Offset(16f, 5f), Offset(16f, 19f), 3f)
+                }
+                HidoyatActionIcon.Play -> {
+                    val p = Path().apply {
+                        moveTo(7f, 4f)
+                        lineTo(20f, 12f)
+                        lineTo(7f, 20f)
+                        close()
+                    }
+                    drawPath(p, tint)
+                }
+                HidoyatActionIcon.Heart,
+                HidoyatActionIcon.HeartOutline -> {
+                    val p = Path().apply {
+                        moveTo(12f, 21f)
+                        cubicTo(10f, 19f, 3f, 13f, 3f, 8.5f)
+                        cubicTo(3f, 3f, 10f, 2f, 12f, 8f)
+                        cubicTo(14f, 2f, 21f, 3f, 21f, 8.5f)
+                        cubicTo(21f, 13f, 14f, 19f, 12f, 21f)
+                        close()
+                    }
+                    if (type == HidoyatActionIcon.Heart) {
+                        drawPath(p, tint)
+                    } else {
+                        drawPath(p, tint, style = stroke)
+                    }
+                }
+                HidoyatActionIcon.Copy -> {
+                    drawRect(
+                        tint, Offset(8f, 4f),
+                        androidx.compose.ui.geometry.Size(12f, 14f),
+                        style = stroke
+                    )
+                    drawRect(
+                        tint, Offset(4f, 8f),
+                        androidx.compose.ui.geometry.Size(12f, 14f),
+                        style = stroke
+                    )
+                }
+                HidoyatActionIcon.Repeat,
+                HidoyatActionIcon.RepeatOne -> {
+                    drawLine(tint, Offset(4f, 8f), Offset(19f, 8f), 2f)
+                    drawLine(tint, Offset(19f, 8f), Offset(16f, 5f), 2f)
+                    drawLine(tint, Offset(19f, 8f), Offset(16f, 11f), 2f)
+                    drawLine(tint, Offset(20f, 16f), Offset(5f, 16f), 2f)
+                    drawLine(tint, Offset(5f, 16f), Offset(8f, 13f), 2f)
+                    drawLine(tint, Offset(5f, 16f), Offset(8f, 19f), 2f)
+                }
+                HidoyatActionIcon.Previous -> {
+                    drawLine(tint, Offset(5f, 5f), Offset(5f, 19f), 2f)
+                    val p = Path().apply {
+                        moveTo(19f, 5f)
+                        lineTo(8f, 12f)
+                        lineTo(19f, 19f)
+                        close()
+                    }
+                    drawPath(p, tint)
+                }
+                HidoyatActionIcon.Next -> {
+                    drawLine(tint, Offset(19f, 5f), Offset(19f, 19f), 2f)
+                    val p = Path().apply {
+                        moveTo(5f, 5f)
+                        lineTo(16f, 12f)
+                        lineTo(5f, 19f)
+                        close()
+                    }
+                    drawPath(p, tint)
+                }
+            }
+        }
+    }
+}
