@@ -156,6 +156,10 @@ class PrayerViewModel(app: Application) : AndroidViewModel(app) {
         _state.update {
             it.copy(schedule = cached.schedule, source = cached.source, fromCache = true)
         }
+        PrayerReminderScheduler.scheduleAll(
+            getApplication<Application>(),
+            cached.schedule
+        )
     }
 
     private fun load() {
@@ -168,6 +172,10 @@ class PrayerViewModel(app: Application) : AndroidViewModel(app) {
                     target.slug, target.label, target.latitude, target.longitude
                 )
                 cache.save(target.key, result)
+                PrayerReminderScheduler.scheduleAll(
+                    getApplication<Application>(),
+                    result.schedule
+                )
                 _state.update {
                     if (targetOf(it)?.key != target.key) it
                     else it.copy(

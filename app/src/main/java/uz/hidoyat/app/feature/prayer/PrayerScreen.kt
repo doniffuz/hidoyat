@@ -334,6 +334,8 @@ private fun ScheduleSection(state: PrayerUiState, schedule: PrayerSchedule) {
             }
         }
 
+        PrayerReminderSettings(schedule)
+
         val backup = state.source == PrayerDataSource.ALADHAN_BACKUP
         Text(
             text = stringResource(
