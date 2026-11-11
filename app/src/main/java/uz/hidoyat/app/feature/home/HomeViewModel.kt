@@ -9,6 +9,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import uz.hidoyat.app.data.local.GoalsStore
 import uz.hidoyat.app.data.local.ProfileStore
+import uz.hidoyat.app.feature.quran.AyahKey
+import uz.hidoyat.app.feature.quran.QuranStore
 
 enum class DailyGoal(val key: String) {
     Quran("quran"),
@@ -19,12 +21,15 @@ enum class DailyGoal(val key: String) {
 data class HomeUiState(
     val userName: String,
     val date: LocalDate,
-    val completedGoals: Set<DailyGoal>
+    val completedGoals: Set<DailyGoal>,
+    /** Qur'on bo'limidagi oxirgi o'qilgan oyat (hali o'qilmagan bo'lsa null). */
+    val quranLastRead: AyahKey? = null
 )
 
 class HomeViewModel(app: Application) : AndroidViewModel(app) {
     private val store = GoalsStore(app)
     private val profile = ProfileStore(app)
+    private val quran = QuranStore(app)
 
     private val _state = MutableStateFlow(createState())
     val state: StateFlow<HomeUiState> = _state.asStateFlow()
@@ -35,7 +40,8 @@ class HomeViewModel(app: Application) : AndroidViewModel(app) {
         return HomeUiState(
             userName = profile.firstName.ifBlank { DEFAULT_USER_NAME },
             date = today,
-            completedGoals = DailyGoal.entries.filter { it.key in done }.toSet()
+            completedGoals = DailyGoal.entries.filter { it.key in done }.toSet(),
+            quranLastRead = quran.lastRead
         )
     }
 

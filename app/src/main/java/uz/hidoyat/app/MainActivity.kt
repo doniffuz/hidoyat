@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
                     HidoyatMainScreen(
                         homeState = state,
                         onToggleGoal = viewModel::toggleGoal,
+                        onHomeShown = viewModel::refresh,
                         profileContent = {
                             val profile by profileViewModel.state.collectAsState()
                             ProfileScreen(

@@ -12,3 +12,7 @@
 *.keystore
 keystore.properties
 google-services.json
+__pycache__/
+
+gradle/libs.versions.toml.broken-backup
+app/build.gradle.kts.backup

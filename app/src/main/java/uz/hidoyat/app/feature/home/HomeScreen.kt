@@ -62,12 +62,16 @@ import uz.hidoyat.app.core.ui.components.HidoyatSecondaryButton
 import uz.hidoyat.app.core.ui.components.HidoyatSectionTitle
 import uz.hidoyat.app.core.ui.components.HidoyatShapes
 import uz.hidoyat.app.core.ui.theme.HidoyatTheme
+import uz.hidoyat.app.feature.quran.AyahKey
+import uz.hidoyat.app.feature.quran.surahDisplayName
 
 @Composable
 fun HomeScreen(
     state: HomeUiState,
     onToggleGoal: (DailyGoal) -> Unit,
     onOpenQibla: () -> Unit = {},
+    onOpenQuran: () -> Unit = {},
+    onContinueQuran: () -> Unit = {},
     contentWindowInsets: WindowInsets = ScaffoldDefaults.contentWindowInsets
 ) {
     val context = LocalContext.current
@@ -109,12 +113,12 @@ fun HomeScreen(
         ) {
             item { HomeHeader(state) }
             item { NextPrayerCard(onAllTimes = { soon(R.string.home_quick_prayer) }) }
-            item { QuranCard(onContinue = { soon(R.string.home_quick_quran) }) }
+            item { QuranCard(lastRead = state.quranLastRead, onContinue = onContinueQuran) }
             item { QiblaCard(onClick = onOpenQibla) }
             item {
                 QuickSections(
                     onPrayer = { soon(R.string.home_quick_prayer) },
-                    onQuran = { soon(R.string.home_quick_quran) },
+                    onQuran = onOpenQuran,
                     onQibla = onOpenQibla,
                     onZikr = { soon(R.string.home_quick_zikr) }
                 )
@@ -266,7 +270,7 @@ private fun NextPrayerCard(onAllTimes: () -> Unit) {
 }
 
 @Composable
-private fun QuranCard(onContinue: () -> Unit) {
+private fun QuranCard(lastRead: AyahKey?, onContinue: () -> Unit) {
     HidoyatCard(modifier = Modifier.fillMaxWidth()) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -279,12 +283,19 @@ private fun QuranCard(onContinue: () -> Unit) {
                     style = MaterialTheme.typography.titleMedium
                 )
                 Text(
-                    text = stringResource(R.string.home_quran_last_read),
+                    text = if (lastRead != null) {
+                        stringResource(
+                            R.string.home_quran_last_read_format,
+                            surahDisplayName(lastRead.surah),
+                            lastRead.ayah
+                        )
+                    } else {
+                        stringResource(R.string.home_quran_last_read)
+                    },
                     style = MaterialTheme.typography.bodySmall,
                     color = HidoyatTheme.colors.textSecondary
                 )
             }
-            DemoBadge()
         }
         Spacer(Modifier.height(16.dp))
         HidoyatPrimaryButton(

@@ -33,8 +33,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -55,6 +57,7 @@ import uz.hidoyat.app.feature.home.HomeUiState
 import uz.hidoyat.app.feature.placeholder.PlaceholderScreen
 import uz.hidoyat.app.feature.prayer.PrayerScreen
 import uz.hidoyat.app.feature.qibla.QiblaScreen
+import uz.hidoyat.app.feature.quran.QuranScreen
 
 enum class HidoyatDestination(
     @StringRes val label: Int,
@@ -73,11 +76,18 @@ enum class HidoyatDestination(
 fun HidoyatMainScreen(
     homeState: HomeUiState,
     onToggleGoal: (DailyGoal) -> Unit,
-    profileContent: @Composable () -> Unit
+    profileContent: @Composable () -> Unit,
+    /** Bosh sahifa ko'rsatilganda chaqiriladi (masalan, oxirgi o'qilgan Qur'on joyini yangilash uchun). */
+    onHomeShown: () -> Unit = {}
 ) {
     var selected by rememberSaveable { mutableIntStateOf(0) }
+    var pendingQuranContinue by remember { mutableStateOf(false) }
     val destinations = HidoyatDestination.entries
     val current = destinations[selected.coerceIn(0, destinations.lastIndex)]
+
+    LaunchedEffect(current) {
+        if (current == HidoyatDestination.Home) onHomeShown()
+    }
 
     BackHandler(enabled = current != HidoyatDestination.Home) {
         selected = HidoyatDestination.Home.ordinal
@@ -99,6 +109,11 @@ fun HidoyatMainScreen(
                     state = homeState,
                     onToggleGoal = onToggleGoal,
                     onOpenQibla = { selected = HidoyatDestination.Qibla.ordinal },
+                    onOpenQuran = { selected = HidoyatDestination.Quran.ordinal },
+                    onContinueQuran = {
+                        pendingQuranContinue = true
+                        selected = HidoyatDestination.Quran.ordinal
+                    },
                     contentWindowInsets = WindowInsets.systemBars.only(
                         WindowInsetsSides.Horizontal + WindowInsetsSides.Top
                     )
@@ -106,6 +121,10 @@ fun HidoyatMainScreen(
                 HidoyatDestination.Profile -> profileContent()
                 HidoyatDestination.Prayer -> PrayerScreen()
                 HidoyatDestination.Qibla -> QiblaScreen()
+                HidoyatDestination.Quran -> QuranScreen(
+                    pendingContinue = pendingQuranContinue,
+                    onContinueHandled = { pendingQuranContinue = false }
+                )
                 else -> PlaceholderScreen(title = current.label, icon = current.icon)
             }
         }
