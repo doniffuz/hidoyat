@@ -1,4 +1,33 @@
 <resources>
+
     <string name="app_name" translatable="false">HIDOYAT</string>
     <string name="app_tagline">Islomiy hayotingiz uchun eng yaxshi yordamchi</string>
+
+    <!-- Profile -->
+
+    <!-- Settings -->
+    <string name="settings_title">Sozlamalar</string>
+    <string name="settings_notifications">Bildirishnomalar</string>
+    <string name="settings_prayer_reminders">Namoz eslatmalari</string>
+    <string name="settings_appearance">Ko‘rinish</string>
+    <string name="settings_theme">Mavzu</string>
+    <string name="settings_theme_system">Tizim bo‘yicha</string>
+    <string name="settings_theme_light">Yorug‘</string>
+    <string name="settings_theme_dark">Qorong‘i</string>
+
+    <!-- About -->
+    <string name="about_title">Ilova haqida</string>
+    <string name="about_app_name">HIDOYAT</string>
+    <string name="about_tagline">Islomiy hayotingiz uchun eng yaxshi yordamchi</string>
+    <string name="about_developer">Dasturchisi: Donyor</string>
+    <string name="about_contact">Telegram: @Doniku_Admin</string>
+    <string name="about_version">Versiya</string>
+
+    <!-- Privacy -->
+    <string name="privacy_title">Maxfiylik</string>
+    <string name="privacy_local_profile">Profil ma’lumotlari ushbu qurilmada saqlanadi.</string>
+    <string name="privacy_avatar">Profil rasmi qurilmada saqlanadi.</string>
+    <string name="privacy_permissions">Ilova faqat o‘z funksiyalari uchun zarur bo‘lgan ruxsatlardan foydalanadi.</string>
+    <string name="privacy_no_sale">Shaxsiy ma’lumotlar sotilmaydi.</string>
+
 </resources>

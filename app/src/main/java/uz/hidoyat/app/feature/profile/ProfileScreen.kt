@@ -32,6 +32,11 @@ import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -53,10 +58,13 @@ import uz.hidoyat.app.core.ui.components.HidoyatPrimaryButton
 import uz.hidoyat.app.core.ui.components.HidoyatSecondaryButton
 import uz.hidoyat.app.core.ui.components.HidoyatSectionTitle
 import uz.hidoyat.app.core.ui.theme.HidoyatTheme
+import uz.hidoyat.app.data.local.ThemeMode
 
 @Composable
 fun ProfileScreen(
     state: ProfileUiState,
+    themeMode: ThemeMode,
+    onThemeChange: (ThemeMode) -> Unit,
     onEdit: () -> Unit,
     onFirstNameChange: (String) -> Unit,
     onLastNameChange: (String) -> Unit,
@@ -65,19 +73,62 @@ fun ProfileScreen(
     onCancel: () -> Unit,
     onSave: () -> Unit
 ) {
-    BackHandler(enabled = state.editing, onBack = onCancel)
-    if (state.editing) {
-        ProfileEdit(
+    var page by rememberSaveable { mutableStateOf("profile") }
+
+    BackHandler(enabled = state.editing || page != "profile") {
+        if (state.editing) onCancel() else page = "profile"
+    }
+
+    when {
+        state.editing -> ProfileEdit(
             state, onFirstNameChange, onLastNameChange, onAvatarPicked,
             onRemoveAvatar, onCancel, onSave
         )
-    } else {
-        ProfileView(state, onEdit)
+        page == "settings" -> SettingsScreen(
+            themeMode = themeMode,
+            onThemeChange = onThemeChange,
+            onBack = { page = "profile" }
+        )
+        page == "about" -> ProfileInfoScreen(
+            title = "Ilova haqida",
+            onBack = { page = "profile" },
+            lines = listOf(
+                "HIDOYAT",
+                "Islomiy hayotingiz uchun kundalik yordamchi",
+                "Dasturchisi: Donyor",
+                "Telegram: @Doniku_Admin",
+                "Ilova bepul. Premium va majburiy obuna mavjud emas."
+            )
+        )
+        page == "privacy" -> ProfileInfoScreen(
+            title = "Maxfiylik",
+            onBack = { page = "profile" },
+            lines = listOf(
+                "Profil ismi, familiyasi va rasmi ilovaning ichki xotirasida saqlanadi.",
+                "Joylashuv qurilmada yaqin hududni aniqlash uchun ishlatiladi. Namoz vaqtlarini hisoblash xizmatiga tanlangan hudud koordinatalari yuborilishi mumkin.",
+                "Namoz vaqtlari, Qur’on tarjimasi va audio uchun tegishli tashqi xizmatlarga so‘rov yuboriladi.",
+                "Ilova ishlashi uchun kerakli ruxsatlardan foydalanadi. Joylashuv va bildirishnomalar ruxsati Android sozlamalarida boshqariladi.",
+                "Maxfiylik ma’lumotlari ilovaning amaldagi ishlashiga qarab yangilanadi."
+            )
+        )
+        else -> ProfileView(
+            state = state,
+            onEdit = onEdit,
+            onSettings = { page = "settings" },
+            onAbout = { page = "about" },
+            onPrivacy = { page = "privacy" }
+        )
     }
 }
 
 @Composable
-private fun ProfileView(state: ProfileUiState, onEdit: () -> Unit) {
+private fun ProfileView(
+    state: ProfileUiState,
+    onEdit: () -> Unit,
+    onSettings: () -> Unit,
+    onAbout: () -> Unit,
+    onPrivacy: () -> Unit
+) {
     val colors = HidoyatTheme.colors
     Column(
         modifier = Modifier
@@ -127,6 +178,10 @@ private fun ProfileView(state: ProfileUiState, onEdit: () -> Unit) {
                 .fillMaxWidth()
                 .padding(24.dp)
         )
+        ProfileMenuItem("Sozlamalar", "Ilova mavzusini tanlash", onSettings)
+        ProfileMenuItem("Ilova haqida", "HIDOYAT va dasturchi haqida", onAbout)
+        ProfileMenuItem("Maxfiylik", "Ma’lumotlar va ruxsatlar haqida", onPrivacy)
+        Spacer(Modifier.height(24.dp))
     }
 }
 
@@ -290,6 +345,66 @@ private fun ProfileEdit(
                     modifier = Modifier.weight(1f)
                 )
             }
+        }
+    }
+}
+
+
+@Composable
+private fun ProfileMenuItem(
+    title: String,
+    description: String,
+    onClick: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 24.dp, vertical = 5.dp)
+            .clip(RoundedCornerShape(18.dp))
+            .background(MaterialTheme.colorScheme.surface)
+            .clickable(onClick = onClick)
+            .padding(18.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(title, style = MaterialTheme.typography.titleMedium)
+            Spacer(Modifier.height(3.dp))
+            Text(
+                description,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+        Text("›", style = MaterialTheme.typography.headlineMedium)
+    }
+}
+
+@Composable
+private fun ProfileInfoScreen(
+    title: String,
+    onBack: () -> Unit,
+    lines: List<String>
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
+            .verticalScroll(rememberScrollState())
+            .padding(24.dp)
+    ) {
+        TextButton(onClick = onBack) {
+            Text("‹  Orqaga")
+        }
+        Spacer(Modifier.height(12.dp))
+        Text(title, style = MaterialTheme.typography.headlineMedium)
+        Spacer(Modifier.height(20.dp))
+        lines.forEach { line ->
+            Text(
+                text = line,
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onBackground,
+                modifier = Modifier.padding(vertical = 10.dp)
+            )
         }
     }
 }
