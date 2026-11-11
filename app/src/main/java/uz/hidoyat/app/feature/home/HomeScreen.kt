@@ -47,6 +47,7 @@ import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import java.time.LocalDate
@@ -63,6 +64,8 @@ import uz.hidoyat.app.core.ui.components.HidoyatSectionTitle
 import uz.hidoyat.app.core.ui.components.HidoyatShapes
 import uz.hidoyat.app.core.ui.theme.HidoyatTheme
 import uz.hidoyat.app.feature.quran.AyahKey
+import uz.hidoyat.app.feature.dua.DuaCatalog
+import uz.hidoyat.app.feature.zikr.ZikrCatalog
 import uz.hidoyat.app.feature.quran.surahDisplayName
 
 @Composable
@@ -127,6 +130,7 @@ fun HomeScreen(
             }
             item {
                 DailyDuaZikr(
+                    date = state.date,
                     onDua = onOpenDua,
                     onZikr = onOpenZikr
                 )
@@ -375,37 +379,83 @@ private fun QuickCard(
 }
 
 @Composable
-private fun DailyDuaZikr(onDua: () -> Unit, onZikr: () -> Unit) {
+private fun DailyDuaZikr(
+    date: LocalDate,
+    onDua: () -> Unit,
+    onZikr: () -> Unit
+) {
+    val duaIndex = (date.toEpochDay() % DuaCatalog.items.size).toInt()
+    val zikrIndex = (date.toEpochDay() % ZikrCatalog.items.size).toInt()
+
+    val dailyDua = DuaCatalog.items[duaIndex]
+    val dailyZikr = ZikrCatalog.items[zikrIndex]
+
     Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        HidoyatSectionTitle(title = stringResource(R.string.home_daily_title))
-        DailyTextCard(R.string.home_dua_title, onDua)
-        DailyTextCard(R.string.home_zikr_title, onZikr)
+        HidoyatSectionTitle(
+            title = stringResource(R.string.home_daily_title)
+        )
+
+        DailyTextCard(
+            title = R.string.home_dua_title,
+            arabic = dailyDua.arabic,
+            transliteration = dailyDua.transliteration,
+            meaning = dailyDua.meaning,
+            onDetails = onDua
+        )
+
+        DailyTextCard(
+            title = R.string.home_zikr_title,
+            arabic = dailyZikr.arabic,
+            transliteration = dailyZikr.transliteration,
+            meaning = dailyZikr.meaning,
+            onDetails = onZikr
+        )
     }
 }
 
 @Composable
-private fun DailyTextCard(@StringRes title: Int, onDetails: () -> Unit) {
+private fun DailyTextCard(
+    @StringRes title: Int,
+    arabic: String,
+    transliteration: String,
+    meaning: String,
+    onDetails: () -> Unit
+) {
     HidoyatCard(modifier = Modifier.fillMaxWidth()) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            Text(
-                text = stringResource(title),
-                style = MaterialTheme.typography.titleLarge,
-                modifier = Modifier.weight(1f)
-            )
-            Spacer(Modifier.width(8.dp))
-            DemoBadge()
-        }
-        Spacer(Modifier.height(8.dp))
         Text(
-            text = stringResource(R.string.home_daily_placeholder),
+            text = stringResource(title),
+            style = MaterialTheme.typography.titleLarge
+        )
+
+        Spacer(Modifier.height(14.dp))
+
+        Text(
+            text = arabic,
+            style = MaterialTheme.typography.headlineMedium,
+            color = HidoyatTheme.colors.gold,
+            textAlign = TextAlign.Center,
+            lineHeight = 38.sp,
+            modifier = Modifier.fillMaxWidth()
+        )
+
+        Spacer(Modifier.height(12.dp))
+
+        Text(
+            text = transliteration,
+            style = MaterialTheme.typography.titleMedium,
+            color = MaterialTheme.colorScheme.primary
+        )
+
+        Spacer(Modifier.height(6.dp))
+
+        Text(
+            text = meaning,
             style = MaterialTheme.typography.bodyMedium,
             color = HidoyatTheme.colors.textSecondary
         )
+
         Spacer(Modifier.height(16.dp))
+
         HidoyatSecondaryButton(
             text = stringResource(R.string.home_details),
             onClick = onDetails,
@@ -475,3 +525,5 @@ private fun DailyGoals(done: Set<DailyGoal>, onToggle: (DailyGoal) -> Unit) {
         }
     }
 }
+
+
