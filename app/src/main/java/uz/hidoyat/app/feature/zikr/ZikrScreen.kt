@@ -18,7 +18,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
 import uz.hidoyat.app.core.ui.components.HidoyatCard
 import uz.hidoyat.app.core.ui.components.HidoyatSectionTitle
 import uz.hidoyat.app.core.ui.theme.HidoyatTheme
@@ -26,9 +25,9 @@ import uz.hidoyat.app.core.ui.theme.HidoyatTheme
 @Composable
 fun ZikrScreen(
     onBack: () -> Unit,
-    viewModel: ZikrViewModel = viewModel()
+    zikrViewModel: ZikrViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 ) {
-    val state by viewModel.state.collectAsStateWithLifecycle()
+    val state by zikrViewModel.state.collectAsStateWithLifecycle()
     val zikr = ZikrCatalog.find(state.zikrId)
     val colors = HidoyatTheme.colors
     val progress = (state.count.toFloat() / state.goal.coerceAtLeast(1)).coerceIn(0f, 1f)
@@ -119,7 +118,7 @@ fun ZikrScreen(
                             modifier = Modifier
                                 .weight(1f)
                                 .clip(RoundedCornerShape(14.dp))
-                                .clickable { viewModel.setGoal(goal) },
+                                .clickable { zikrViewModel.setGoal(goal) },
                             color = if (selected) colors.goldContainer else MaterialTheme.colorScheme.surface,
                             shape = RoundedCornerShape(14.dp),
                             border = androidx.compose.foundation.BorderStroke(
@@ -222,7 +221,7 @@ fun ZikrScreen(
                 val selected = item.id == state.zikrId
                 HidoyatCard(
                     modifier = Modifier.fillMaxWidth(),
-                    onClick = { viewModel.selectZikr(item.id) }
+                    onClick = { zikrViewModel.selectZikr(item.id) }
                 ) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
