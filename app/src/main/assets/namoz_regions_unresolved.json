@@ -1,0 +1,22 @@
+{
+  "UZB001D002": {
+    "name": "Ulug'nor",
+    "province": "Andijon",
+    "reason": "no_exact_match"
+  },
+  "UZB001D007": {
+    "name": "Bo'z",
+    "province": "Andijon",
+    "reason": "no_exact_match"
+  },
+  "UZB003D003": {
+    "name": "Yangiobod",
+    "province": "Jizzax",
+    "reason": "no_exact_match"
+  },
+  "UZB003D006": {
+    "name": "Sharof Rashidov",
+    "province": "Jizzax",
+    "reason": "no_exact_match"
+  }
+}

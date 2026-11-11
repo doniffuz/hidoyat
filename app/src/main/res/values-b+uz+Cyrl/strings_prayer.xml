@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="prayer_title">Намоз вақтлари</string>
+    <string name="prayer_province">Вилоят</string>
+    <string name="prayer_district">Туман / шаҳар</string>
+    <string name="prayer_select_province">Вилоятни танланг</string>
+    <string name="prayer_select_district">Туман ёки шаҳарни танланг</string>
+    <string name="prayer_select_province_first">Аввал вилоятни танланг</string>
+    <string name="prayer_empty_hint">Намоз вақтларини кўриш учун вилоят ва туман/шаҳарни танланг.</string>
+    <string name="prayer_use_location">Жойлашув бўйича аниқлаш</string>
+    <string name="prayer_loc_approx">Жойлашувингизга энг яқин ҳудуд танланди (тахминий). Керак бўлса ўзгартиринг.</string>
+    <string name="prayer_loc_denied">Жойлашув рухсати берилмади. Ҳудудни қўлда танланг.</string>
+    <string name="prayer_loc_unavailable">Жойлашувни аниқлаб бўлмади. Ҳудудни қўлда танланг.</string>
+    <string name="prayer_loc_outside">Жойлашувингиз Ўзбекистон ҳудудлари яқинида эмас. Ҳудудни қўлда танланг.</string>
+    <string name="prayer_unresolved_title">Бу ҳудуд учун аниқ манба топилмади</string>
+    <string name="prayer_unresolved_body">Нотўғри вақт кўрсатмаслик учун namoz-vaqti.uz ҳудудини ўзингиз танланг.</string>
+    <string name="prayer_manual_region">Namoz-vaqti.uz ҳудуди</string>
+    <string name="prayer_manual_select">Ҳудудни танланг</string>
+    <string name="prayer_refresh">Янгилаш</string>
+    <string name="prayer_loading">Намоз вақтлари юкланмоқда…</string>
+    <string name="prayer_error">Намоз вақтларини юклаб бўлмади. Интернетни текширинг ва қайта уриниб кўринг.</string>
+    <string name="prayer_cache_stale">Эски маълумот (%1$s). Янгилаб бўлмади, сақланган вақтлар кўрсатилмоқда.</string>
+    <string name="prayer_cache_today">Янгилаб бўлмади. Охирги сақланган маълумот кўрсатилмоқда.</string>
+    <string name="prayer_source_primary">Манба: Namoz-vaqti.uz</string>
+    <string name="prayer_source_backup">Захира манба: Aladhan</string>
+    <string name="prayer_source_backup_note">Асосий манба ишламади. Вақтлар ҳисобланган ва расмий жадвалдан фарқ қилиши мумкин.</string>
+    <string name="prayer_fajr">Бомдод</string>
+    <string name="prayer_sunrise">Қуёш</string>
+    <string name="prayer_dhuhr">Пешин</string>
+    <string name="prayer_asr">Аср</string>
+    <string name="prayer_maghrib">Шом</string>
+    <string name="prayer_isha">Хуфтон</string>
+</resources>

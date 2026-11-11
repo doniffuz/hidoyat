@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="prayer_title">Namoz vaqtlari</string>
+    <string name="prayer_province">Viloyat</string>
+    <string name="prayer_district">Tuman / shahar</string>
+    <string name="prayer_select_province">Viloyatni tanlang</string>
+    <string name="prayer_select_district">Tuman yoki shaharni tanlang</string>
+    <string name="prayer_select_province_first">Avval viloyatni tanlang</string>
+    <string name="prayer_empty_hint">Namoz vaqtlarini ko\'rish uchun viloyat va tuman/shaharni tanlang.</string>
+    <string name="prayer_use_location">Joylashuv bo\'yicha aniqlash</string>
+    <string name="prayer_loc_approx">Joylashuvingizga eng yaqin hudud tanlandi (taxminiy). Kerak bo\'lsa o\'zgartiring.</string>
+    <string name="prayer_loc_denied">Joylashuv ruxsati berilmadi. Hududni qo\'lda tanlang.</string>
+    <string name="prayer_loc_unavailable">Joylashuvni aniqlab bo\'lmadi. Hududni qo\'lda tanlang.</string>
+    <string name="prayer_loc_outside">Joylashuvingiz O\'zbekiston hududlari yaqinida emas. Hududni qo\'lda tanlang.</string>
+    <string name="prayer_unresolved_title">Bu hudud uchun aniq manba topilmadi</string>
+    <string name="prayer_unresolved_body">Noto\'g\'ri vaqt ko\'rsatmaslik uchun namoz-vaqti.uz hududini o\'zingiz tanlang.</string>
+    <string name="prayer_manual_region">Namoz-vaqti.uz hududi</string>
+    <string name="prayer_manual_select">Hududni tanlang</string>
+    <string name="prayer_refresh">Yangilash</string>
+    <string name="prayer_loading">Namoz vaqtlari yuklanmoqda…</string>
+    <string name="prayer_error">Namoz vaqtlarini yuklab bo\'lmadi. Internetni tekshiring va qayta urinib ko\'ring.</string>
+    <string name="prayer_cache_stale">Eski ma\'lumot (%1$s). Yangilab bo\'lmadi, saqlangan vaqtlar ko\'rsatilmoqda.</string>
+    <string name="prayer_cache_today">Yangilab bo\'lmadi. Oxirgi saqlangan ma\'lumot ko\'rsatilmoqda.</string>
+    <string name="prayer_source_primary">Manba: Namoz-vaqti.uz</string>
+    <string name="prayer_source_backup">Zaxira manba: Aladhan</string>
+    <string name="prayer_source_backup_note">Asosiy manba ishlamadi. Vaqtlar hisoblangan va rasmiy jadvaldan farq qilishi mumkin.</string>
+    <string name="prayer_fajr">Bomdod</string>
+    <string name="prayer_sunrise">Quyosh</string>
+    <string name="prayer_dhuhr">Peshin</string>
+    <string name="prayer_asr">Asr</string>
+    <string name="prayer_maghrib">Shom</string>
+    <string name="prayer_isha">Xufton</string>
+</resources>

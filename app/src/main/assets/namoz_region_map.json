@@ -1,0 +1,782 @@
+{
+  "UZB001D001": {
+    "namozSlug": "andijon",
+    "namozName": "Andijon tumani"
+  },
+  "UZB001D003": {
+    "namozSlug": "xojaobod",
+    "namozName": "Xo‘jaobod tumani"
+  },
+  "UZB001D004": {
+    "namozSlug": "marhamat",
+    "namozName": "Marhamat tumani"
+  },
+  "UZB001D005": {
+    "namozSlug": "asaka",
+    "namozName": "Asaka tumani"
+  },
+  "UZB001D006": {
+    "namozSlug": "shahrixon",
+    "namozName": "Shahrixon tumani"
+  },
+  "UZB001D008": {
+    "namozSlug": "jalaquduq",
+    "namozName": "Jalaquduq tumani"
+  },
+  "UZB001D009": {
+    "namozSlug": "buloqboshi",
+    "namozName": "Buloqboshi tumani"
+  },
+  "UZB001D010": {
+    "namozSlug": "qorgontepa",
+    "namozName": "Qo‘rg‘ontepa tumani"
+  },
+  "UZB001D011": {
+    "namozSlug": "baliqchi",
+    "namozName": "Baliqchi tumani"
+  },
+  "UZB001D012": {
+    "namozSlug": "xonobod-shahri",
+    "namozName": "Xonobod shahri"
+  },
+  "UZB001D013": {
+    "namozSlug": "oltinkol",
+    "namozName": "Oltinko‘l tumani"
+  },
+  "UZB001D014": {
+    "namozSlug": "andijon-shahri",
+    "namozName": "Andijon shahri"
+  },
+  "UZB001D015": {
+    "namozSlug": "izboskan",
+    "namozName": "Izboskan tumani"
+  },
+  "UZB001D016": {
+    "namozSlug": "paxtaobod",
+    "namozName": "Paxtaobod tumani"
+  },
+  "UZB002D001": {
+    "namozSlug": "jondor",
+    "namozName": "Jondor tumani"
+  },
+  "UZB002D002": {
+    "namozSlug": "buxoro",
+    "namozName": "Buxoro tumani"
+  },
+  "UZB002D003": {
+    "namozSlug": "olot",
+    "namozName": "Olot tumani"
+  },
+  "UZB002D004": {
+    "namozSlug": "qorakol",
+    "namozName": "Qorako‘l tumani"
+  },
+  "UZB002D005": {
+    "namozSlug": "qorovulbozor",
+    "namozName": "Qorovulbozor tumani"
+  },
+  "UZB002D006": {
+    "namozSlug": "shofirkon",
+    "namozName": "Shofirkon tumani"
+  },
+  "UZB002D007": {
+    "namozSlug": "romitan",
+    "namozName": "Romitan tumani"
+  },
+  "UZB002D008": {
+    "namozSlug": "peshku",
+    "namozName": "Peshku tumani"
+  },
+  "UZB002D009": {
+    "namozSlug": "kogon",
+    "namozName": "Kogon tumani"
+  },
+  "UZB002D010": {
+    "namozSlug": "kogon-shahri",
+    "namozName": "Kogon shahri"
+  },
+  "UZB002D011": {
+    "namozSlug": "buxoro-shahri",
+    "namozName": "Buxoro shahri"
+  },
+  "UZB002D012": {
+    "namozSlug": "gijduvon",
+    "namozName": "G‘ijduvon tumani"
+  },
+  "UZB002D013": {
+    "namozSlug": "vobkent",
+    "namozName": "Vobkent tumani"
+  },
+  "UZB003D001": {
+    "namozSlug": "forish",
+    "namozName": "Forish tumani"
+  },
+  "UZB003D002": {
+    "namozSlug": "gallaorol",
+    "namozName": "G‘allaorol tumani"
+  },
+  "UZB003D004": {
+    "namozSlug": "jizzax-shahri",
+    "namozName": "Jizzax shahri"
+  },
+  "UZB003D005": {
+    "namozSlug": "baxmal",
+    "namozName": "Baxmal tumani"
+  },
+  "UZB003D007": {
+    "namozSlug": "zafarobod",
+    "namozName": "Zafarobod tumani"
+  },
+  "UZB003D008": {
+    "namozSlug": "zarbdor",
+    "namozName": "Zarbdor tumani"
+  },
+  "UZB003D009": {
+    "namozSlug": "zomin",
+    "namozName": "Zomin tumani"
+  },
+  "UZB003D010": {
+    "namozSlug": "paxtakor",
+    "namozName": "Paxtakor tumani"
+  },
+  "UZB003D011": {
+    "namozSlug": "dostlik",
+    "namozName": "Do‘stlik tumani"
+  },
+  "UZB003D012": {
+    "namozSlug": "mirzachol",
+    "namozName": "Mirzacho‘l tumani"
+  },
+  "UZB003D013": {
+    "namozSlug": "arnasoy",
+    "namozName": "Arnasoy tumani"
+  },
+  "UZB004D001": {
+    "namozSlug": "kasbi",
+    "namozName": "Kasbi tumani"
+  },
+  "UZB004D002": {
+    "namozSlug": "mirishkor",
+    "namozName": "Mirishkor tumani"
+  },
+  "UZB004D003": {
+    "namozSlug": "nishon",
+    "namozName": "Nishon tumani"
+  },
+  "UZB004D004": {
+    "namozSlug": "muborak",
+    "namozName": "Muborak tumani"
+  },
+  "UZB004D005": {
+    "namozSlug": "kitob",
+    "namozName": "Kitob tumani"
+  },
+  "UZB004D006": {
+    "namozSlug": "qamashi",
+    "namozName": "Qamashi tumani"
+  },
+  "UZB004D007": {
+    "namozSlug": "qarshi",
+    "namozName": "Qarshi tumani"
+  },
+  "UZB004D008": {
+    "namozSlug": "guzor",
+    "namozName": "G‘uzor tumani"
+  },
+  "UZB004D009": {
+    "namozSlug": "dehqonobod",
+    "namozName": "Dehqonobod tumani"
+  },
+  "UZB004D010": {
+    "namozSlug": "koson",
+    "namozName": "Koson tumani"
+  },
+  "UZB004D011": {
+    "namozSlug": "qarshi-shahri",
+    "namozName": "Qarshi shahri"
+  },
+  "UZB004D012": {
+    "namozSlug": "chiroqchi",
+    "namozName": "Chiroqchi tumani"
+  },
+  "UZB004D013": {
+    "namozSlug": "yakkabog",
+    "namozName": "Yakkabog‘ tumani"
+  },
+  "UZB004D014": {
+    "namozSlug": "shahrisabz",
+    "namozName": "Shahrisabz tumani"
+  },
+  "UZB004D015": {
+    "namozSlug": "shahrisabz-shahri",
+    "namozName": "Shahrisabz shahri"
+  },
+  "UZB005D001": {
+    "namozSlug": "nurota",
+    "namozName": "Nurota tumani"
+  },
+  "UZB005D002": {
+    "namozSlug": "navoiy-shahri",
+    "namozName": "Navoiy shahri"
+  },
+  "UZB005D003": {
+    "namozSlug": "qiziltepa",
+    "namozName": "Qiziltepa tumani"
+  },
+  "UZB005D004": {
+    "namozSlug": "karmana",
+    "namozName": "Karmana tumani"
+  },
+  "UZB005D005": {
+    "namozSlug": "navbahor",
+    "namozName": "Navbahor tumani"
+  },
+  "UZB005D006": {
+    "namozSlug": "xatirchi",
+    "namozName": "Xatirchi tumani"
+  },
+  "UZB005D007": {
+    "namozSlug": "uchquduq",
+    "namozName": "Uchquduq tumani"
+  },
+  "UZB005D008": {
+    "namozSlug": "konimex",
+    "namozName": "Konimex tumani"
+  },
+  "UZB005D009": {
+    "namozSlug": "tomdi",
+    "namozName": "Tomdi tumani"
+  },
+  "UZB005D010": {
+    "namozSlug": "zarafshon-shahri",
+    "namozName": "Zarafshon shahri"
+  },
+  "UZB006D001": {
+    "namozSlug": "pop",
+    "namozName": "Pop tumani"
+  },
+  "UZB006D002": {
+    "namozSlug": "mingbuloq",
+    "namozName": "Mingbuloq tumani"
+  },
+  "UZB006D003": {
+    "namozSlug": "norin",
+    "namozName": "Norin tumani"
+  },
+  "UZB006D004": {
+    "namozSlug": "chust",
+    "namozName": "Chust tumani"
+  },
+  "UZB006D005": {
+    "namozSlug": "namangan",
+    "namozName": "Namangan tumani"
+  },
+  "UZB006D006": {
+    "namozSlug": "toraqorgon",
+    "namozName": "To‘raqo‘rg‘on tumani"
+  },
+  "UZB006D007": {
+    "namozSlug": "yangiqorgon",
+    "namozName": "Yangiqo‘rg‘on tumani"
+  },
+  "UZB006D008": {
+    "namozSlug": "kosonsoy",
+    "namozName": "Kosonsoy tumani"
+  },
+  "UZB006D009": {
+    "namozSlug": "namangan-shahri",
+    "namozName": "Namangan shahri"
+  },
+  "UZB006D010": {
+    "namozSlug": "uychi",
+    "namozName": "Uychi tumani"
+  },
+  "UZB006D011": {
+    "namozSlug": "chortoq",
+    "namozName": "Chortoq tumani"
+  },
+  "UZB006D012": {
+    "namozSlug": "uchqorgon",
+    "namozName": "Uchqo‘rg‘on tumani"
+  },
+  "UZB007D001": {
+    "namozSlug": "nurobod",
+    "namozName": "Nurobod tumani"
+  },
+  "UZB007D002": {
+    "namozSlug": "paxtachi",
+    "namozName": "Paxtachi tumani"
+  },
+  "UZB007D003": {
+    "namozSlug": "pastdargom",
+    "namozName": "Pastdarg‘om tumani"
+  },
+  "UZB007D004": {
+    "namozSlug": "ishtixon",
+    "namozName": "Ishtixon tumani"
+  },
+  "UZB007D005": {
+    "namozSlug": "narpay",
+    "namozName": "Narpay tumani"
+  },
+  "UZB007D006": {
+    "namozSlug": "kattaqorgon",
+    "namozName": "Kattaqo‘rg‘on tumani"
+  },
+  "UZB007D007": {
+    "namozSlug": "kattaqorgon-shahri",
+    "namozName": "Kattaqo‘rg‘on shahri"
+  },
+  "UZB007D008": {
+    "namozSlug": "qoshrabot",
+    "namozName": "Qo‘shrabot tumani"
+  },
+  "UZB007D009": {
+    "namozSlug": "samarqand-shahri",
+    "namozName": "Samarqand shahri"
+  },
+  "UZB007D010": {
+    "namozSlug": "urgut",
+    "namozName": "Urgut tumani"
+  },
+  "UZB007D011": {
+    "namozSlug": "samarqand",
+    "namozName": "Samarqand tumani"
+  },
+  "UZB007D012": {
+    "namozSlug": "tayloq",
+    "namozName": "Tayloq tumani"
+  },
+  "UZB007D013": {
+    "namozSlug": "jomboy",
+    "namozName": "Jomboy tumani"
+  },
+  "UZB007D014": {
+    "namozSlug": "payariq",
+    "namozName": "Payariq tumani"
+  },
+  "UZB007D015": {
+    "namozSlug": "oqdaryo",
+    "namozName": "Oqdaryo tumani"
+  },
+  "UZB007D016": {
+    "namozSlug": "bulungur",
+    "namozName": "Bulung‘ur tumani"
+  },
+  "UZB008D001": {
+    "namozSlug": "termiz",
+    "namozName": "Termiz tumani"
+  },
+  "UZB008D002": {
+    "namozSlug": "boysun",
+    "namozName": "Boysun tumani"
+  },
+  "UZB008D003": {
+    "namozSlug": "muzrabot",
+    "namozName": "Muzrabot tumani"
+  },
+  "UZB008D004": {
+    "namozSlug": "sherobod",
+    "namozName": "Sherobod tumani"
+  },
+  "UZB008D005": {
+    "namozSlug": "angor",
+    "namozName": "Angor tumani"
+  },
+  "UZB008D006": {
+    "namozSlug": "sariosiyo",
+    "namozName": "Sariosiyo tumani"
+  },
+  "UZB008D007": {
+    "namozSlug": "jarqorgon",
+    "namozName": "Jarqo‘rg‘on tumani"
+  },
+  "UZB008D008": {
+    "namozSlug": "termiz-shahri",
+    "namozName": "Termiz shahri"
+  },
+  "UZB008D009": {
+    "namozSlug": "qiziriq",
+    "namozName": "Qiziriq tumani"
+  },
+  "UZB008D010": {
+    "namozSlug": "shorchi",
+    "namozName": "Sho‘rchi tumani"
+  },
+  "UZB008D011": {
+    "namozSlug": "qumqorgon",
+    "namozName": "Qumqo‘rg‘on tumani"
+  },
+  "UZB008D012": {
+    "namozSlug": "uzun",
+    "namozName": "Uzun tumani"
+  },
+  "UZB008D013": {
+    "namozSlug": "oltinsoy",
+    "namozName": "Oltinsoy tumani"
+  },
+  "UZB008D014": {
+    "namozSlug": "denov",
+    "namozName": "Denov tumani"
+  },
+  "UZB009D001": {
+    "namozSlug": "sardoba",
+    "namozName": "Sardoba tumani"
+  },
+  "UZB009D002": {
+    "namozSlug": "xovos",
+    "namozName": "Xovos tumani"
+  },
+  "UZB009D003": {
+    "namozSlug": "mirzaobod",
+    "namozName": "Mirzaobod tumani"
+  },
+  "UZB009D004": {
+    "namozSlug": "boyovut",
+    "namozName": "Boyovut tumani"
+  },
+  "UZB009D005": {
+    "namozSlug": "shirin-shahri",
+    "namozName": "Shirin shahri"
+  },
+  "UZB009D006": {
+    "namozSlug": "yangiyer-shahri",
+    "namozName": "Yangiyer shahri"
+  },
+  "UZB009D007": {
+    "namozSlug": "guliston-shahri",
+    "namozName": "Guliston shahri"
+  },
+  "UZB009D008": {
+    "namozSlug": "sayxunobod",
+    "namozName": "Sayxunobod tumani"
+  },
+  "UZB009D009": {
+    "namozSlug": "guliston",
+    "namozName": "Guliston tumani"
+  },
+  "UZB009D010": {
+    "namozSlug": "oqoltin",
+    "namozName": "Oqoltin tumani"
+  },
+  "UZB009D011": {
+    "namozSlug": "sirdaryo",
+    "namozName": "Sirdaryo tumani"
+  },
+  "UZB010D001": {
+    "namozSlug": "bektemir",
+    "namozName": "Bektemir"
+  },
+  "UZB010D002": {
+    "namozSlug": "sergeli",
+    "namozName": "Sergeli"
+  },
+  "UZB010D003": {
+    "namozSlug": "chilonzor",
+    "namozName": "Chilonzor"
+  },
+  "UZB010D004": {
+    "namozSlug": "uchtepa",
+    "namozName": "Uchtepa"
+  },
+  "UZB010D005": {
+    "namozSlug": "yakkasaroy",
+    "namozName": "Yakkasaroy"
+  },
+  "UZB010D006": {
+    "namozSlug": "olmazor",
+    "namozName": "Olmazor"
+  },
+  "UZB010D007": {
+    "namozSlug": "shayxontohur",
+    "namozName": "Shayxontohur"
+  },
+  "UZB010D008": {
+    "namozSlug": "yunusobod",
+    "namozName": "Yunusobod"
+  },
+  "UZB010D009": {
+    "namozSlug": "yashnobod",
+    "namozName": "Yashnobod"
+  },
+  "UZB010D010": {
+    "namozSlug": "mirobod",
+    "namozName": "Mirobod"
+  },
+  "UZB010D011": {
+    "namozSlug": "mirzo-ulugbek",
+    "namozName": "Mirzo Ulug‘bek"
+  },
+  "UZB011D001": {
+    "namozSlug": "bekobod",
+    "namozName": "Bekobod tumani"
+  },
+  "UZB011D002": {
+    "namozSlug": "bekobod-shahri",
+    "namozName": "Bekobod shahri"
+  },
+  "UZB011D003": {
+    "namozSlug": "ortachirchiq",
+    "namozName": "O‘rta Chirchiq tumani"
+  },
+  "UZB011D004": {
+    "namozSlug": "quyichirchiq",
+    "namozName": "Quyi Chirchiq tumani"
+  },
+  "UZB011D005": {
+    "namozSlug": "chinoz",
+    "namozName": "Chinoz tumani"
+  },
+  "UZB011D006": {
+    "namozSlug": "ohangaron",
+    "namozName": "Ohangaron tumani"
+  },
+  "UZB011D007": {
+    "namozSlug": "boka",
+    "namozName": "Bo‘ka tumani"
+  },
+  "UZB011D008": {
+    "namozSlug": "oqqorgon",
+    "namozName": "Oqqo‘rg‘on tumani"
+  },
+  "UZB011D009": {
+    "namozSlug": "piskent",
+    "namozName": "Piskent tumani"
+  },
+  "UZB011D010": {
+    "namozSlug": "olmaliq",
+    "namozName": "Olmaliq"
+  },
+  "UZB011D011": {
+    "namozSlug": "ohangaron-shahri",
+    "namozName": "Ohangaron shahri"
+  },
+  "UZB011D012": {
+    "namozSlug": "yangiyol",
+    "namozName": "Yangiyo‘l tumani"
+  },
+  "UZB011D013": {
+    "namozSlug": "yangiyol-shahri",
+    "namozName": "Yangiyo‘l shahri"
+  },
+  "UZB011D014": {
+    "namozSlug": "zangiota",
+    "namozName": "Zangiota tumani"
+  },
+  "UZB011D015": {
+    "namozSlug": "toshkent-tumani",
+    "namozName": "Toshkent tumani"
+  },
+  "UZB011D016": {
+    "namozSlug": "yuqorichirchiq",
+    "namozName": "Yuqori Chirchiq tumani"
+  },
+  "UZB011D017": {
+    "namozSlug": "parkent",
+    "namozName": "Parkent tumani"
+  },
+  "UZB011D018": {
+    "namozSlug": "angren",
+    "namozName": "Angren"
+  },
+  "UZB011D019": {
+    "namozSlug": "qibray",
+    "namozName": "Qibray tumani"
+  },
+  "UZB011D020": {
+    "namozSlug": "bostonliq",
+    "namozName": "Bo‘stonliq tumani"
+  },
+  "UZB011D021": {
+    "namozSlug": "chirchiq",
+    "namozName": "Chirchiq"
+  },
+  "UZB011D022": {
+    "namozSlug": "nurafshon",
+    "namozName": "Nurafshon"
+  },
+  "UZB012D001": {
+    "namozSlug": "bogdod",
+    "namozName": "Bog‘dod tumani"
+  },
+  "UZB012D002": {
+    "namozSlug": "ozbekiston",
+    "namozName": "O‘zbekiston tumani"
+  },
+  "UZB012D003": {
+    "namozSlug": "beshariq",
+    "namozName": "Beshariq tumani"
+  },
+  "UZB012D004": {
+    "namozSlug": "sox",
+    "namozName": "So‘x tumani"
+  },
+  "UZB012D005": {
+    "namozSlug": "fargona",
+    "namozName": "Farg‘ona tumani"
+  },
+  "UZB012D006": {
+    "namozSlug": "rishton",
+    "namozName": "Rishton tumani"
+  },
+  "UZB012D007": {
+    "namozSlug": "oltiariq",
+    "namozName": "Oltiariq tumani"
+  },
+  "UZB012D008": {
+    "namozSlug": "uchkoprik",
+    "namozName": "Uchko‘prik tumani"
+  },
+  "UZB012D009": {
+    "namozSlug": "quvasoy-shahri",
+    "namozName": "Quvasoy shahri"
+  },
+  "UZB012D010": {
+    "namozSlug": "fargona-shahri",
+    "namozName": "Farg‘ona shahri"
+  },
+  "UZB012D011": {
+    "namozSlug": "qoqon-shahri",
+    "namozName": "Qo‘qon shahri"
+  },
+  "UZB012D012": {
+    "namozSlug": "furqat",
+    "namozName": "Furqat tumani"
+  },
+  "UZB012D013": {
+    "namozSlug": "qoshtepa",
+    "namozName": "Qo‘shtepa tumani"
+  },
+  "UZB012D014": {
+    "namozSlug": "buvayda",
+    "namozName": "Buvayda tumani"
+  },
+  "UZB012D015": {
+    "namozSlug": "dangara",
+    "namozName": "Dang‘ara tumani"
+  },
+  "UZB012D016": {
+    "namozSlug": "yozyovon",
+    "namozName": "Yozyovon tumani"
+  },
+  "UZB012D017": {
+    "namozSlug": "quva",
+    "namozName": "Quva tumani"
+  },
+  "UZB012D018": {
+    "namozSlug": "toshloq",
+    "namozName": "Toshloq tumani"
+  },
+  "UZB012D019": {
+    "namozSlug": "marghilon-shahri",
+    "namozName": "Marg‘ilon shahri"
+  },
+  "UZB013D001": {
+    "namozSlug": "xiva",
+    "namozName": "Xiva tumani"
+  },
+  "UZB013D002": {
+    "namozSlug": "shovot",
+    "namozName": "Shovot tumani"
+  },
+  "UZB013D003": {
+    "namozSlug": "qoshkopir",
+    "namozName": "Qo‘shko‘pir tumani"
+  },
+  "UZB013D004": {
+    "namozSlug": "gurlan",
+    "namozName": "Gurlan tumani"
+  },
+  "UZB013D005": {
+    "namozSlug": "xazorasp",
+    "namozName": "Xazorasp tumani"
+  },
+  "UZB013D006": {
+    "namozSlug": "xonqa",
+    "namozName": "Xonqa tumani"
+  },
+  "UZB013D007": {
+    "namozSlug": "yangiariq",
+    "namozName": "Yangiariq tumani"
+  },
+  "UZB013D008": {
+    "namozSlug": "bogot",
+    "namozName": "Bog‘ot tumani"
+  },
+  "UZB013D009": {
+    "namozSlug": "urganch",
+    "namozName": "Urganch tumani"
+  },
+  "UZB013D010": {
+    "namozSlug": "yangibozor",
+    "namozName": "Yangibozor tumani"
+  },
+  "UZB013D011": {
+    "namozSlug": "urganch-shahri",
+    "namozName": "Urganch shahri"
+  },
+  "UZB013D012": {
+    "namozSlug": "xiva-shahri",
+    "namozName": "Xiva shahri"
+  },
+  "UZB014D001": {
+    "namozSlug": "qoraozak",
+    "namozName": "Qorao‘zak tumani"
+  },
+  "UZB014D002": {
+    "namozSlug": "kungirot",
+    "namozName": "Qo‘ng‘irot tumani"
+  },
+  "UZB014D003": {
+    "namozSlug": "amudaryo",
+    "namozName": "Amudaryo tumani"
+  },
+  "UZB014D004": {
+    "namozSlug": "chimboy",
+    "namozName": "Chimboy tumani"
+  },
+  "UZB014D005": {
+    "namozSlug": "qanlikol",
+    "namozName": "Qanliko‘l tumani"
+  },
+  "UZB014D006": {
+    "namozSlug": "shumanay",
+    "namozName": "Shumanay tumani"
+  },
+  "UZB014D007": {
+    "namozSlug": "xojayli",
+    "namozName": "Xo‘jayli tumani"
+  },
+  "UZB014D008": {
+    "namozSlug": "kegeyli",
+    "namozName": "Kegeyli tumani"
+  },
+  "UZB014D009": {
+    "namozSlug": "moynoq",
+    "namozName": "Mo‘ynoq tumani"
+  },
+  "UZB014D010": {
+    "namozSlug": "nukus-tumani",
+    "namozName": "Nukus tumani"
+  },
+  "UZB014D011": {
+    "namozSlug": "taxtakopir",
+    "namozName": "Taxtako‘pir tumani"
+  },
+  "UZB014D012": {
+    "namozSlug": "nukus-shahri",
+    "namozName": "Nukus shahri"
+  },
+  "UZB014D013": {
+    "namozSlug": "tortkol",
+    "namozName": "To‘rtko‘l tumani"
+  },
+  "UZB014D014": {
+    "namozSlug": "ellikqala",
+    "namozName": "Ellikqal’a tumani"
+  },
+  "UZB014D015": {
+    "namozSlug": "beruniy",
+    "namozName": "Beruniy tumani"
+  }
+}

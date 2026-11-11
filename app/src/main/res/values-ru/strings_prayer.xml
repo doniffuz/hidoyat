@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="prayer_title">Время намаза</string>
+    <string name="prayer_province">Область</string>
+    <string name="prayer_district">Район / город</string>
+    <string name="prayer_select_province">Выберите область</string>
+    <string name="prayer_select_district">Выберите район или город</string>
+    <string name="prayer_select_province_first">Сначала выберите область</string>
+    <string name="prayer_empty_hint">Выберите область и район/город, чтобы увидеть время намаза.</string>
+    <string name="prayer_use_location">Определить по местоположению</string>
+    <string name="prayer_loc_approx">Выбран ближайший к вам регион (приблизительно). При необходимости измените.</string>
+    <string name="prayer_loc_denied">Доступ к местоположению не предоставлен. Выберите регион вручную.</string>
+    <string name="prayer_loc_unavailable">Не удалось определить местоположение. Выберите регион вручную.</string>
+    <string name="prayer_loc_outside">Вы находитесь вдали от регионов Узбекистана. Выберите регион вручную.</string>
+    <string name="prayer_unresolved_title">Для этого региона нет точного источника</string>
+    <string name="prayer_unresolved_body">Чтобы не показывать неверное время, выберите регион namoz-vaqti.uz самостоятельно.</string>
+    <string name="prayer_manual_region">Регион namoz-vaqti.uz</string>
+    <string name="prayer_manual_select">Выберите регион</string>
+    <string name="prayer_refresh">Обновить</string>
+    <string name="prayer_loading">Загрузка времени намаза…</string>
+    <string name="prayer_error">Не удалось загрузить время намаза. Проверьте интернет и повторите попытку.</string>
+    <string name="prayer_cache_stale">Устаревшие данные (%1$s). Обновить не удалось, показаны сохранённые значения.</string>
+    <string name="prayer_cache_today">Обновить не удалось. Показаны последние сохранённые данные.</string>
+    <string name="prayer_source_primary">Источник: Namoz-vaqti.uz</string>
+    <string name="prayer_source_backup">Резервный источник: Aladhan</string>
+    <string name="prayer_source_backup_note">Основной источник недоступен. Время рассчитано и может отличаться от официального расписания.</string>
+    <string name="prayer_fajr">Фаджр</string>
+    <string name="prayer_sunrise">Восход</string>
+    <string name="prayer_dhuhr">Зухр</string>
+    <string name="prayer_asr">Аср</string>
+    <string name="prayer_maghrib">Магриб</string>
+    <string name="prayer_isha">Иша</string>
+</resources>

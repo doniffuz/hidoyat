@@ -53,6 +53,7 @@ import uz.hidoyat.app.feature.home.DailyGoal
 import uz.hidoyat.app.feature.home.HomeScreen
 import uz.hidoyat.app.feature.home.HomeUiState
 import uz.hidoyat.app.feature.placeholder.PlaceholderScreen
+import uz.hidoyat.app.feature.prayer.PrayerScreen
 
 enum class HidoyatDestination(
     @StringRes val label: Int,
@@ -101,6 +102,7 @@ fun HidoyatMainScreen(
                     )
                 )
                 HidoyatDestination.Profile -> profileContent()
+                HidoyatDestination.Prayer -> PrayerScreen()
                 else -> PlaceholderScreen(title = current.label, icon = current.icon)
             }
         }

@@ -1,0 +1,894 @@
+[
+  {
+    "slug": "amudaryo",
+    "name": "Amudaryo tumani"
+  },
+  {
+    "slug": "andijon-shahri",
+    "name": "Andijon shahri"
+  },
+  {
+    "slug": "andijon",
+    "name": "Andijon tumani"
+  },
+  {
+    "slug": "andijon-viloyati",
+    "name": "Andijon viloyati"
+  },
+  {
+    "slug": "angor",
+    "name": "Angor tumani"
+  },
+  {
+    "slug": "angren",
+    "name": "Angren"
+  },
+  {
+    "slug": "arnasoy",
+    "name": "Arnasoy tumani"
+  },
+  {
+    "slug": "asaka-shahri",
+    "name": "Asaka shahri"
+  },
+  {
+    "slug": "asaka",
+    "name": "Asaka tumani"
+  },
+  {
+    "slug": "baliqchi",
+    "name": "Baliqchi tumani"
+  },
+  {
+    "slug": "bandixon",
+    "name": "Bandixon tumani"
+  },
+  {
+    "slug": "baxmal",
+    "name": "Baxmal tumani"
+  },
+  {
+    "slug": "bekobod-shahri",
+    "name": "Bekobod shahri"
+  },
+  {
+    "slug": "bekobod",
+    "name": "Bekobod tumani"
+  },
+  {
+    "slug": "bektemir",
+    "name": "Bektemir"
+  },
+  {
+    "slug": "beruniy",
+    "name": "Beruniy tumani"
+  },
+  {
+    "slug": "beshariq",
+    "name": "Beshariq tumani"
+  },
+  {
+    "slug": "bogdod",
+    "name": "Bog‘dod tumani"
+  },
+  {
+    "slug": "bogot",
+    "name": "Bog‘ot tumani"
+  },
+  {
+    "slug": "boyovut",
+    "name": "Boyovut tumani"
+  },
+  {
+    "slug": "boysun",
+    "name": "Boysun tumani"
+  },
+  {
+    "slug": "boka",
+    "name": "Bo‘ka tumani"
+  },
+  {
+    "slug": "bostonliq",
+    "name": "Bo‘stonliq tumani"
+  },
+  {
+    "slug": "boston",
+    "name": "Bo‘ston tumani"
+  },
+  {
+    "slug": "bozatov",
+    "name": "Bo‘zatov tumani"
+  },
+  {
+    "slug": "buloqboshi",
+    "name": "Buloqboshi tumani"
+  },
+  {
+    "slug": "bulungur",
+    "name": "Bulung‘ur tumani"
+  },
+  {
+    "slug": "buvayda",
+    "name": "Buvayda tumani"
+  },
+  {
+    "slug": "buxoro-shahri",
+    "name": "Buxoro shahri"
+  },
+  {
+    "slug": "buxoro",
+    "name": "Buxoro tumani"
+  },
+  {
+    "slug": "buxoro-viloyati",
+    "name": "Buxoro viloyati"
+  },
+  {
+    "slug": "chilonzor",
+    "name": "Chilonzor"
+  },
+  {
+    "slug": "chimboy-shahri",
+    "name": "Chimboy shahri"
+  },
+  {
+    "slug": "chimboy",
+    "name": "Chimboy tumani"
+  },
+  {
+    "slug": "chinoz",
+    "name": "Chinoz tumani"
+  },
+  {
+    "slug": "chirchiq",
+    "name": "Chirchiq"
+  },
+  {
+    "slug": "chiroqchi",
+    "name": "Chiroqchi tumani"
+  },
+  {
+    "slug": "chortoq",
+    "name": "Chortoq tumani"
+  },
+  {
+    "slug": "chust",
+    "name": "Chust tumani"
+  },
+  {
+    "slug": "dangara",
+    "name": "Dang‘ara tumani"
+  },
+  {
+    "slug": "dehqonobod",
+    "name": "Dehqonobod tumani"
+  },
+  {
+    "slug": "denov-shahri",
+    "name": "Denov shahri"
+  },
+  {
+    "slug": "denov",
+    "name": "Denov tumani"
+  },
+  {
+    "slug": "dostlik",
+    "name": "Do‘stlik tumani"
+  },
+  {
+    "slug": "ellikqala",
+    "name": "Ellikqal’a tumani"
+  },
+  {
+    "slug": "fargona-shahri",
+    "name": "Farg‘ona shahri"
+  },
+  {
+    "slug": "fargona",
+    "name": "Farg‘ona tumani"
+  },
+  {
+    "slug": "fargona-viloyati",
+    "name": "Farg‘ona viloyati"
+  },
+  {
+    "slug": "forish",
+    "name": "Forish tumani"
+  },
+  {
+    "slug": "furqat",
+    "name": "Furqat tumani"
+  },
+  {
+    "slug": "guliston-shahri",
+    "name": "Guliston shahri"
+  },
+  {
+    "slug": "guliston",
+    "name": "Guliston tumani"
+  },
+  {
+    "slug": "gurlan",
+    "name": "Gurlan tumani"
+  },
+  {
+    "slug": "gallaorol",
+    "name": "G‘allaorol tumani"
+  },
+  {
+    "slug": "gijduvon",
+    "name": "G‘ijduvon tumani"
+  },
+  {
+    "slug": "guzor",
+    "name": "G‘uzor tumani"
+  },
+  {
+    "slug": "ishtixon",
+    "name": "Ishtixon tumani"
+  },
+  {
+    "slug": "izboskan",
+    "name": "Izboskan tumani"
+  },
+  {
+    "slug": "jalaquduq",
+    "name": "Jalaquduq tumani"
+  },
+  {
+    "slug": "jarqorgon",
+    "name": "Jarqo‘rg‘on tumani"
+  },
+  {
+    "slug": "jizzax-shahri",
+    "name": "Jizzax shahri"
+  },
+  {
+    "slug": "jizzax",
+    "name": "Jizzax tumani"
+  },
+  {
+    "slug": "jizzax-viloyati",
+    "name": "Jizzax viloyati"
+  },
+  {
+    "slug": "jomboy",
+    "name": "Jomboy tumani"
+  },
+  {
+    "slug": "jondor",
+    "name": "Jondor tumani"
+  },
+  {
+    "slug": "karmana",
+    "name": "Karmana tumani"
+  },
+  {
+    "slug": "kasbi",
+    "name": "Kasbi tumani"
+  },
+  {
+    "slug": "kattaqorgon-shahri",
+    "name": "Kattaqo‘rg‘on shahri"
+  },
+  {
+    "slug": "kattaqorgon",
+    "name": "Kattaqo‘rg‘on tumani"
+  },
+  {
+    "slug": "kegeyli",
+    "name": "Kegeyli tumani"
+  },
+  {
+    "slug": "kitob",
+    "name": "Kitob tumani"
+  },
+  {
+    "slug": "kogon-shahri",
+    "name": "Kogon shahri"
+  },
+  {
+    "slug": "kogon",
+    "name": "Kogon tumani"
+  },
+  {
+    "slug": "konimex",
+    "name": "Konimex tumani"
+  },
+  {
+    "slug": "kosonsoy",
+    "name": "Kosonsoy tumani"
+  },
+  {
+    "slug": "koson",
+    "name": "Koson tumani"
+  },
+  {
+    "slug": "mangit",
+    "name": "Mang‘it"
+  },
+  {
+    "slug": "marghilon-shahri",
+    "name": "Marg‘ilon shahri"
+  },
+  {
+    "slug": "marhamat",
+    "name": "Marhamat tumani"
+  },
+  {
+    "slug": "mingbuloq",
+    "name": "Mingbuloq tumani"
+  },
+  {
+    "slug": "mirishkor",
+    "name": "Mirishkor tumani"
+  },
+  {
+    "slug": "mirobod",
+    "name": "Mirobod"
+  },
+  {
+    "slug": "mirzachol",
+    "name": "Mirzacho‘l tumani"
+  },
+  {
+    "slug": "mirzaobod",
+    "name": "Mirzaobod tumani"
+  },
+  {
+    "slug": "mirzo-ulugbek",
+    "name": "Mirzo Ulug‘bek"
+  },
+  {
+    "slug": "moynoq",
+    "name": "Mo‘ynoq tumani"
+  },
+  {
+    "slug": "muborak",
+    "name": "Muborak tumani"
+  },
+  {
+    "slug": "muzrabot",
+    "name": "Muzrabot tumani"
+  },
+  {
+    "slug": "namangan-shahri",
+    "name": "Namangan shahri"
+  },
+  {
+    "slug": "namangan",
+    "name": "Namangan tumani"
+  },
+  {
+    "slug": "namangan-viloyati",
+    "name": "Namangan viloyati"
+  },
+  {
+    "slug": "narpay",
+    "name": "Narpay tumani"
+  },
+  {
+    "slug": "navbahor",
+    "name": "Navbahor tumani"
+  },
+  {
+    "slug": "navoiy-shahri",
+    "name": "Navoiy shahri"
+  },
+  {
+    "slug": "navoiy-viloyati",
+    "name": "Navoiy viloyati"
+  },
+  {
+    "slug": "nishon",
+    "name": "Nishon tumani"
+  },
+  {
+    "slug": "norin",
+    "name": "Norin tumani"
+  },
+  {
+    "slug": "nukus-shahri",
+    "name": "Nukus shahri"
+  },
+  {
+    "slug": "nukus-tumani",
+    "name": "Nukus tumani"
+  },
+  {
+    "slug": "nurafshon",
+    "name": "Nurafshon"
+  },
+  {
+    "slug": "nurobod",
+    "name": "Nurobod tumani"
+  },
+  {
+    "slug": "nurota",
+    "name": "Nurota tumani"
+  },
+  {
+    "slug": "ohangaron-shahri",
+    "name": "Ohangaron shahri"
+  },
+  {
+    "slug": "ohangaron",
+    "name": "Ohangaron tumani"
+  },
+  {
+    "slug": "olmaliq",
+    "name": "Olmaliq"
+  },
+  {
+    "slug": "olmazor",
+    "name": "Olmazor"
+  },
+  {
+    "slug": "olot",
+    "name": "Olot tumani"
+  },
+  {
+    "slug": "oltiariq",
+    "name": "Oltiariq tumani"
+  },
+  {
+    "slug": "oltinkol",
+    "name": "Oltinko‘l tumani"
+  },
+  {
+    "slug": "oltinsoy",
+    "name": "Oltinsoy tumani"
+  },
+  {
+    "slug": "oqdaryo",
+    "name": "Oqdaryo tumani"
+  },
+  {
+    "slug": "oqoltin",
+    "name": "Oqoltin tumani"
+  },
+  {
+    "slug": "oqqorgon",
+    "name": "Oqqo‘rg‘on tumani"
+  },
+  {
+    "slug": "ortachirchiq",
+    "name": "O‘rta Chirchiq tumani"
+  },
+  {
+    "slug": "ozbekiston",
+    "name": "O‘zbekiston tumani"
+  },
+  {
+    "slug": "parkent",
+    "name": "Parkent tumani"
+  },
+  {
+    "slug": "pastdargom",
+    "name": "Pastdarg‘om tumani"
+  },
+  {
+    "slug": "paxtachi",
+    "name": "Paxtachi tumani"
+  },
+  {
+    "slug": "paxtakor",
+    "name": "Paxtakor tumani"
+  },
+  {
+    "slug": "paxtaobod",
+    "name": "Paxtaobod tumani"
+  },
+  {
+    "slug": "payariq",
+    "name": "Payariq tumani"
+  },
+  {
+    "slug": "peshku",
+    "name": "Peshku tumani"
+  },
+  {
+    "slug": "piskent",
+    "name": "Piskent tumani"
+  },
+  {
+    "slug": "pop",
+    "name": "Pop tumani"
+  },
+  {
+    "slug": "qamashi",
+    "name": "Qamashi tumani"
+  },
+  {
+    "slug": "qanlikol",
+    "name": "Qanliko‘l tumani"
+  },
+  {
+    "slug": "qarshi-shahri",
+    "name": "Qarshi shahri"
+  },
+  {
+    "slug": "qarshi",
+    "name": "Qarshi tumani"
+  },
+  {
+    "slug": "qashqadaryo-viloyati",
+    "name": "Qashqadaryo viloyati"
+  },
+  {
+    "slug": "qibray",
+    "name": "Qibray tumani"
+  },
+  {
+    "slug": "qiziltepa",
+    "name": "Qiziltepa tumani"
+  },
+  {
+    "slug": "qiziriq",
+    "name": "Qiziriq tumani"
+  },
+  {
+    "slug": "qorakol",
+    "name": "Qorako‘l tumani"
+  },
+  {
+    "slug": "qoraozak",
+    "name": "Qorao‘zak tumani"
+  },
+  {
+    "slug": "qoraqalpogiston",
+    "name": "Qoraqalpog‘iston Resp."
+  },
+  {
+    "slug": "qorovulbozor",
+    "name": "Qorovulbozor tumani"
+  },
+  {
+    "slug": "kungirot-shahri",
+    "name": "Qo‘ng‘irot shahri"
+  },
+  {
+    "slug": "kungirot",
+    "name": "Qo‘ng‘irot tumani"
+  },
+  {
+    "slug": "qoqon-shahri",
+    "name": "Qo‘qon shahri"
+  },
+  {
+    "slug": "qorgontepa",
+    "name": "Qo‘rg‘ontepa tumani"
+  },
+  {
+    "slug": "qoshkopir",
+    "name": "Qo‘shko‘pir tumani"
+  },
+  {
+    "slug": "qoshrabot",
+    "name": "Qo‘shrabot tumani"
+  },
+  {
+    "slug": "qoshtepa",
+    "name": "Qo‘shtepa tumani"
+  },
+  {
+    "slug": "qumqorgon",
+    "name": "Qumqo‘rg‘on tumani"
+  },
+  {
+    "slug": "quvasoy-shahri",
+    "name": "Quvasoy shahri"
+  },
+  {
+    "slug": "quva",
+    "name": "Quva tumani"
+  },
+  {
+    "slug": "quyichirchiq",
+    "name": "Quyi Chirchiq tumani"
+  },
+  {
+    "slug": "rishton",
+    "name": "Rishton tumani"
+  },
+  {
+    "slug": "romitan",
+    "name": "Romitan tumani"
+  },
+  {
+    "slug": "samarqand-shahri",
+    "name": "Samarqand shahri"
+  },
+  {
+    "slug": "samarqand",
+    "name": "Samarqand tumani"
+  },
+  {
+    "slug": "samarqand-viloyati",
+    "name": "Samarqand viloyati"
+  },
+  {
+    "slug": "sardoba",
+    "name": "Sardoba tumani"
+  },
+  {
+    "slug": "sariosiyo",
+    "name": "Sariosiyo tumani"
+  },
+  {
+    "slug": "sayxunobod",
+    "name": "Sayxunobod tumani"
+  },
+  {
+    "slug": "sergeli",
+    "name": "Sergeli"
+  },
+  {
+    "slug": "shahrisabz-shahri",
+    "name": "Shahrisabz shahri"
+  },
+  {
+    "slug": "shahrisabz",
+    "name": "Shahrisabz tumani"
+  },
+  {
+    "slug": "shahrixon",
+    "name": "Shahrixon tumani"
+  },
+  {
+    "slug": "shayxontohur",
+    "name": "Shayxontohur"
+  },
+  {
+    "slug": "sherobod",
+    "name": "Sherobod tumani"
+  },
+  {
+    "slug": "shirin-shahri",
+    "name": "Shirin shahri"
+  },
+  {
+    "slug": "shofirkon",
+    "name": "Shofirkon tumani"
+  },
+  {
+    "slug": "shovot",
+    "name": "Shovot tumani"
+  },
+  {
+    "slug": "shorchi",
+    "name": "Sho‘rchi tumani"
+  },
+  {
+    "slug": "shumanay",
+    "name": "Shumanay tumani"
+  },
+  {
+    "slug": "sirdaryo",
+    "name": "Sirdaryo tumani"
+  },
+  {
+    "slug": "sirdaryo-viloyati",
+    "name": "Sirdaryo viloyati"
+  },
+  {
+    "slug": "sox",
+    "name": "So‘x tumani"
+  },
+  {
+    "slug": "surxondaryo-viloyati",
+    "name": "Surxondaryo viloyati"
+  },
+  {
+    "slug": "taxiatosh",
+    "name": "Taxiatosh shahri"
+  },
+  {
+    "slug": "taxtakopir",
+    "name": "Taxtako‘pir tumani"
+  },
+  {
+    "slug": "tayloq",
+    "name": "Tayloq tumani"
+  },
+  {
+    "slug": "termiz-shahri",
+    "name": "Termiz shahri"
+  },
+  {
+    "slug": "termiz",
+    "name": "Termiz tumani"
+  },
+  {
+    "slug": "tomdi",
+    "name": "Tomdi tumani"
+  },
+  {
+    "slug": "toshkent-shahri",
+    "name": "Toshkent shahri"
+  },
+  {
+    "slug": "toshkent-tumani",
+    "name": "Toshkent tumani"
+  },
+  {
+    "slug": "toshkent-viloyati",
+    "name": "Toshkent viloyati"
+  },
+  {
+    "slug": "toshloq",
+    "name": "Toshloq tumani"
+  },
+  {
+    "slug": "toraqorgon",
+    "name": "To‘raqo‘rg‘on tumani"
+  },
+  {
+    "slug": "tortkol-shahri",
+    "name": "To‘rtko‘l shahri"
+  },
+  {
+    "slug": "tortkol",
+    "name": "To‘rtko‘l tumani"
+  },
+  {
+    "slug": "tuproqqala",
+    "name": "Tuproqqal’a tumani"
+  },
+  {
+    "slug": "uchkoprik",
+    "name": "Uchko‘prik tumani"
+  },
+  {
+    "slug": "uchqorgon",
+    "name": "Uchqo‘rg‘on tumani"
+  },
+  {
+    "slug": "uchquduq",
+    "name": "Uchquduq tumani"
+  },
+  {
+    "slug": "uchtepa",
+    "name": "Uchtepa"
+  },
+  {
+    "slug": "urganch-shahri",
+    "name": "Urganch shahri"
+  },
+  {
+    "slug": "urganch",
+    "name": "Urganch tumani"
+  },
+  {
+    "slug": "urgut",
+    "name": "Urgut tumani"
+  },
+  {
+    "slug": "uychi",
+    "name": "Uychi tumani"
+  },
+  {
+    "slug": "uzun",
+    "name": "Uzun tumani"
+  },
+  {
+    "slug": "vobkent",
+    "name": "Vobkent tumani"
+  },
+  {
+    "slug": "xatirchi",
+    "name": "Xatirchi tumani"
+  },
+  {
+    "slug": "xazorasp",
+    "name": "Xazorasp tumani"
+  },
+  {
+    "slug": "xiva-shahri",
+    "name": "Xiva shahri"
+  },
+  {
+    "slug": "xiva",
+    "name": "Xiva tumani"
+  },
+  {
+    "slug": "xonobod-shahri",
+    "name": "Xonobod shahri"
+  },
+  {
+    "slug": "xonqa",
+    "name": "Xonqa tumani"
+  },
+  {
+    "slug": "xorazm-viloyati",
+    "name": "Xorazm viloyati"
+  },
+  {
+    "slug": "xovos",
+    "name": "Xovos tumani"
+  },
+  {
+    "slug": "xojaobod",
+    "name": "Xo‘jaobod tumani"
+  },
+  {
+    "slug": "xojayli-shahri",
+    "name": "Xo‘jayli shahri"
+  },
+  {
+    "slug": "xojayli",
+    "name": "Xo‘jayli tumani"
+  },
+  {
+    "slug": "yakkabog",
+    "name": "Yakkabog‘ tumani"
+  },
+  {
+    "slug": "yakkasaroy",
+    "name": "Yakkasaroy"
+  },
+  {
+    "slug": "yangiariq",
+    "name": "Yangiariq tumani"
+  },
+  {
+    "slug": "yangibozor",
+    "name": "Yangibozor tumani"
+  },
+  {
+    "slug": "yangihayot",
+    "name": "Yangihayot"
+  },
+  {
+    "slug": "yangiqorgon",
+    "name": "Yangiqo‘rg‘on tumani"
+  },
+  {
+    "slug": "yangiyer-shahri",
+    "name": "Yangiyer shahri"
+  },
+  {
+    "slug": "yangiyol-shahri",
+    "name": "Yangiyo‘l shahri"
+  },
+  {
+    "slug": "yangiyol",
+    "name": "Yangiyo‘l tumani"
+  },
+  {
+    "slug": "yashnobod",
+    "name": "Yashnobod"
+  },
+  {
+    "slug": "yozyovon",
+    "name": "Yozyovon tumani"
+  },
+  {
+    "slug": "yunusobod",
+    "name": "Yunusobod"
+  },
+  {
+    "slug": "yuqorichirchiq",
+    "name": "Yuqori Chirchiq tumani"
+  },
+  {
+    "slug": "zafarobod",
+    "name": "Zafarobod tumani"
+  },
+  {
+    "slug": "zangiota",
+    "name": "Zangiota tumani"
+  },
+  {
+    "slug": "zarafshon-shahri",
+    "name": "Zarafshon shahri"
+  },
+  {
+    "slug": "zarbdor",
+    "name": "Zarbdor tumani"
+  },
+  {
+    "slug": "zomin",
+    "name": "Zomin tumani"
+  }
+]
