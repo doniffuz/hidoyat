@@ -51,6 +51,7 @@ import uz.hidoyat.app.R
 import uz.hidoyat.app.core.ui.components.HidoyatIcon
 import uz.hidoyat.app.core.ui.components.HidoyatIconType
 import uz.hidoyat.app.core.ui.theme.HidoyatTheme
+import uz.hidoyat.app.feature.dua.DuaScreen
 import uz.hidoyat.app.feature.home.DailyGoal
 import uz.hidoyat.app.feature.home.HomeScreen
 import uz.hidoyat.app.feature.home.HomeUiState
@@ -84,6 +85,7 @@ fun HidoyatMainScreen(
     var selected by rememberSaveable { mutableIntStateOf(0) }
     var pendingQuranContinue by remember { mutableStateOf(false) }
     var showZikr by rememberSaveable { mutableStateOf(false) }
+    var showDua by rememberSaveable { mutableStateOf(false) }
     val destinations = HidoyatDestination.entries
     val current = destinations[selected.coerceIn(0, destinations.lastIndex)]
 
@@ -91,11 +93,11 @@ fun HidoyatMainScreen(
         if (current == HidoyatDestination.Home) onHomeShown()
     }
 
-    BackHandler(enabled = showZikr || current != HidoyatDestination.Home) {
-        if (showZikr) {
-            showZikr = false
-        } else {
-            selected = HidoyatDestination.Home.ordinal
+    BackHandler(enabled = showZikr || showDua || current != HidoyatDestination.Home) {
+        when {
+            showZikr -> showZikr = false
+            showDua -> showDua = false
+            else -> selected = HidoyatDestination.Home.ordinal
         }
     }
 
@@ -103,7 +105,7 @@ fun HidoyatMainScreen(
         containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         bottomBar = {
-            if (!showZikr) {
+            if (!showZikr && !showDua) {
                 HidoyatBottomBar(
                     current = current,
                     onSelect = { selected = it.ordinal }
@@ -114,6 +116,8 @@ fun HidoyatMainScreen(
         Box(Modifier.fillMaxSize().padding(inner)) {
             if (showZikr) {
                 ZikrScreen(onBack = { showZikr = false })
+            } else if (showDua) {
+                DuaScreen(onBack = { showDua = false })
             } else when (current) {
                 HidoyatDestination.Home -> HomeScreen(
                     state = homeState,
@@ -125,6 +129,7 @@ fun HidoyatMainScreen(
                         selected = HidoyatDestination.Quran.ordinal
                     },
                     onOpenZikr = { showZikr = true },
+                    onOpenDua = { showDua = true },
                     contentWindowInsets = WindowInsets.systemBars.only(
                         WindowInsetsSides.Horizontal + WindowInsetsSides.Top
                     )

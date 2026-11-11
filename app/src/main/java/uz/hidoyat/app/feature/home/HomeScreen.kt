@@ -73,6 +73,7 @@ fun HomeScreen(
     onOpenQuran: () -> Unit = {},
     onContinueQuran: () -> Unit = {},
     onOpenZikr: () -> Unit = {},
+    onOpenDua: () -> Unit = {},
     contentWindowInsets: WindowInsets = ScaffoldDefaults.contentWindowInsets
 ) {
     val context = LocalContext.current
@@ -126,7 +127,7 @@ fun HomeScreen(
             }
             item {
                 DailyDuaZikr(
-                    onDua = { soon(R.string.home_dua_title) },
+                    onDua = onOpenDua,
                     onZikr = onOpenZikr
                 )
             }
