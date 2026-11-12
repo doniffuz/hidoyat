@@ -1,4 +1,6 @@
 package uz.hidoyat.app.navigation
+import uz.hidoyat.app.feature.prayer.PrayerUiState
+import uz.hidoyat.app.feature.prayer.PrayerViewModel
 
 import androidx.activity.compose.BackHandler
 import androidx.annotation.StringRes
@@ -77,6 +79,8 @@ enum class HidoyatDestination(
 @Composable
 fun HidoyatMainScreen(
     homeState: HomeUiState,
+    prayerState: PrayerUiState,
+    prayerViewModel: PrayerViewModel,
     onToggleGoal: (DailyGoal) -> Unit,
     profileContent: @Composable () -> Unit,
     /** Bosh sahifa ko'rsatilganda chaqiriladi (masalan, oxirgi o'qilgan Qur'on joyini yangilash uchun). */
@@ -121,6 +125,7 @@ fun HidoyatMainScreen(
             } else when (current) {
                 HidoyatDestination.Home -> HomeScreen(
                     state = homeState,
+                    prayerState = prayerState,
                     onToggleGoal = onToggleGoal,
                     onOpenQibla = { selected = HidoyatDestination.Qibla.ordinal },
                     onOpenQuran = { selected = HidoyatDestination.Quran.ordinal },
@@ -135,7 +140,7 @@ fun HidoyatMainScreen(
                     )
                 )
                 HidoyatDestination.Profile -> profileContent()
-                HidoyatDestination.Prayer -> PrayerScreen()
+                HidoyatDestination.Prayer -> PrayerScreen(viewModel = prayerViewModel)
                 HidoyatDestination.Qibla -> QiblaScreen()
                 HidoyatDestination.Quran -> QuranScreen(
                     pendingContinue = pendingQuranContinue,

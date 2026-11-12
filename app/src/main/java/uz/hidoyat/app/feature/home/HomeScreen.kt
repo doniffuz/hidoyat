@@ -1,4 +1,15 @@
 package uz.hidoyat.app.feature.home
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import kotlinx.coroutines.delay
+import java.time.Duration
+import java.time.LocalDateTime
+import java.time.LocalTime
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.graphics.Color
+import androidx.compose.material3.ButtonDefaults
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.background
@@ -64,6 +75,7 @@ import uz.hidoyat.app.core.ui.components.HidoyatSectionTitle
 import uz.hidoyat.app.core.ui.components.HidoyatShapes
 import uz.hidoyat.app.core.ui.theme.HidoyatTheme
 import uz.hidoyat.app.feature.quran.AyahKey
+import uz.hidoyat.app.feature.prayer.PrayerUiState
 import uz.hidoyat.app.feature.dua.DuaCatalog
 import uz.hidoyat.app.feature.zikr.ZikrCatalog
 import uz.hidoyat.app.feature.quran.surahDisplayName
@@ -71,6 +83,7 @@ import uz.hidoyat.app.feature.quran.surahDisplayName
 @Composable
 fun HomeScreen(
     state: HomeUiState,
+    prayerState: PrayerUiState,
     onToggleGoal: (DailyGoal) -> Unit,
     onOpenQibla: () -> Unit = {},
     onOpenQuran: () -> Unit = {},
@@ -117,7 +130,7 @@ fun HomeScreen(
             verticalArrangement = Arrangement.spacedBy(24.dp)
         ) {
             item { HomeHeader(state) }
-            item { NextPrayerCard(onAllTimes = { soon(R.string.home_quick_prayer) }) }
+            item { NextPrayerCard(prayerState = prayerState, onAllTimes = { soon(R.string.home_quick_prayer) }) }
             item { QuranCard(lastRead = state.quranLastRead, onContinue = onContinueQuran) }
             item { QiblaCard(onClick = onOpenQibla) }
             item {
@@ -210,8 +223,62 @@ private fun HomeHeader(state: HomeUiState) {
 }
 
 @Composable
-private fun NextPrayerCard(onAllTimes: () -> Unit) {
+private fun NextPrayerCard(
+    prayerState: PrayerUiState,
+    onAllTimes: () -> Unit
+) {
     val colors = HidoyatTheme.colors
+    val schedule = prayerState.schedule
+
+    var now by remember { mutableStateOf(LocalDateTime.now()) }
+
+    LaunchedEffect(schedule) {
+        while (schedule != null) {
+            now = LocalDateTime.now()
+            delay(1000)
+        }
+    }
+
+    val nextPrayer = schedule?.let { data ->
+        val candidates = listOf(
+            stringResource(R.string.prayer_fajr) to data.fajr,
+            stringResource(R.string.prayer_dhuhr) to data.dhuhr,
+            stringResource(R.string.prayer_asr) to data.asr,
+            stringResource(R.string.prayer_maghrib) to data.maghrib,
+            stringResource(R.string.prayer_isha) to data.isha
+        )
+
+        candidates.mapNotNull { (name, time) ->
+            runCatching {
+                val prayerTime = LocalDateTime.of(
+                    now.toLocalDate(),
+                    LocalTime.parse(time)
+                )
+                val nextTime = if (prayerTime.isAfter(now)) {
+                    prayerTime
+                } else {
+                    prayerTime.plusDays(1)
+                }
+                Triple(name, time, nextTime)
+            }.getOrNull()
+        }.minByOrNull { it.third }
+    }
+
+    val remainingText = nextPrayer?.let {
+        val seconds = Duration.between(now, it.third).seconds.coerceAtLeast(0)
+        val hours = seconds / 3600
+        val minutes = (seconds % 3600) / 60
+        val secs = seconds % 60
+        "%02d:%02d:%02d".format(hours, minutes, secs)
+    } ?: "--:--:--"
+
+    val statusText = when {
+        schedule != null -> "${schedule.city} • ${schedule.source}"
+        prayerState.isLoading -> "Namoz vaqtlari yuklanmoqda..."
+        prayerState.error != null -> "Namoz vaqtlarini yangilash uchun Namoz bo‘limini oching"
+        else -> "Namoz vaqtlarini ko‘rish uchun Namoz bo‘limini oching"
+    }
+
     Surface(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(28.dp),
@@ -220,7 +287,9 @@ private fun NextPrayerCard(onAllTimes: () -> Unit) {
         shadowElevation = 8.dp
     ) {
         Box(
-            Modifier.background(Brush.linearGradient(listOf(colors.heroStart, colors.heroEnd)))
+            Modifier.background(
+                Brush.linearGradient(listOf(colors.heroStart, colors.heroEnd))
+            )
         ) {
             HidoyatIcon(
                 type = HidoyatIconType.Crescent,
@@ -232,35 +301,32 @@ private fun NextPrayerCard(onAllTimes: () -> Unit) {
                 modifier = Modifier.padding(22.dp),
                 verticalArrangement = Arrangement.spacedBy(6.dp)
             ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Text(
-                        text = stringResource(R.string.home_next_prayer),
-                        style = MaterialTheme.typography.titleSmall,
-                        color = colors.onHeroMuted
-                    )
-                    DemoBadge()
-                }
                 Text(
-                    text = stringResource(R.string.home_prayer_name_demo),
+                    text = stringResource(R.string.home_next_prayer),
+                    style = MaterialTheme.typography.titleSmall,
+                    color = colors.onHeroMuted
+                )
+                Text(
+                    text = nextPrayer?.first ?: "Namoz vaqtlari",
                     style = MaterialTheme.typography.headlineMedium,
                     color = colors.onHero
                 )
                 Text(
-                    text = stringResource(R.string.home_prayer_time_demo),
+                    text = nextPrayer?.second ?: "--:--",
                     style = MaterialTheme.typography.displayLarge,
                     color = colors.gold
                 )
                 Text(
-                    text = stringResource(R.string.home_prayer_remaining),
+                    text = if (nextPrayer != null) {
+                        "Qolgan vaqt: $remainingText"
+                    } else {
+                        remainingText
+                    },
                     style = MaterialTheme.typography.titleMedium,
                     color = colors.onHero
                 )
                 Text(
-                    text = stringResource(R.string.home_prayer_demo_note),
+                    text = statusText,
                     style = MaterialTheme.typography.bodySmall,
                     color = colors.onHeroMuted
                 )

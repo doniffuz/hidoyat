@@ -1,9 +1,6 @@
 package uz.hidoyat.app.feature.prayer
 
 import android.Manifest
-import android.content.Context
-import android.content.ContextWrapper
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.BorderStroke
@@ -46,7 +43,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModelProvider
 import java.text.DateFormat
 import java.util.Date
 import uz.hidoyat.app.R
@@ -55,12 +51,11 @@ import uz.hidoyat.app.core.ui.components.HidoyatPrimaryButton
 import uz.hidoyat.app.core.ui.theme.HidoyatTheme
 
 @Composable
-fun PrayerScreen(modifier: Modifier = Modifier) {
+fun PrayerScreen(
+    viewModel: PrayerViewModel,
+    modifier: Modifier = Modifier
+) {
     val context = LocalContext.current
-    val activity = remember(context) { context.findComponentActivity() }
-    val viewModel = remember(activity) {
-        ViewModelProvider(activity)[PrayerViewModel::class.java]
-    }
     val state by viewModel.state.collectAsState()
 
     LaunchedEffect(Unit) { viewModel.onScreenShown() }
@@ -91,11 +86,6 @@ fun PrayerScreen(modifier: Modifier = Modifier) {
     )
 }
 
-private tailrec fun Context.findComponentActivity(): ComponentActivity = when (this) {
-    is ComponentActivity -> this
-    is ContextWrapper -> baseContext.findComponentActivity()
-    else -> error("PrayerScreen ComponentActivity ichida bo'lishi kerak")
-}
 
 @Composable
 private fun PrayerContent(

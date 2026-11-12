@@ -15,6 +15,7 @@ import uz.hidoyat.app.core.ui.theme.HidoyatTheme
 import uz.hidoyat.app.data.local.SettingsStore
 import uz.hidoyat.app.data.local.ThemeMode
 import uz.hidoyat.app.feature.home.HomeViewModel
+import uz.hidoyat.app.feature.prayer.PrayerViewModel
 import uz.hidoyat.app.feature.profile.ProfileScreen
 import uz.hidoyat.app.feature.profile.ProfileViewModel
 import uz.hidoyat.app.feature.welcome.WelcomeScreen
@@ -24,6 +25,7 @@ import uz.hidoyat.app.navigation.HidoyatMainScreen
 class MainActivity : ComponentActivity() {
 
     private val viewModel: HomeViewModel by viewModels()
+    private val prayerViewModel: PrayerViewModel by viewModels()
     private val welcomeViewModel: WelcomeViewModel by viewModels()
     private val profileViewModel: ProfileViewModel by viewModels()
 
@@ -54,11 +56,17 @@ class MainActivity : ComponentActivity() {
 
                 if (completed) {
                     val state by viewModel.state.collectAsState()
+                    val prayerState by prayerViewModel.state.collectAsState()
 
                     HidoyatMainScreen(
                         homeState = state,
+                        prayerState = prayerState,
+                        prayerViewModel = prayerViewModel,
                         onToggleGoal = viewModel::toggleGoal,
-                        onHomeShown = viewModel::refresh,
+                        onHomeShown = {
+                            viewModel.refresh()
+                            prayerViewModel.onScreenShown()
+                        },
                         profileContent = {
                             val profile by profileViewModel.state.collectAsState()
 
